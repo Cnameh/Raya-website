@@ -1,0 +1,51 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+}
+
+*:focus-visible {
+  border: 2px solid $clr--primary;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  direction: rtl;
+  font-family: $fm--primary;
+  min-height: 100vh;
+  font-size: 1.6rem;
+}
+
+ul, ol, dl {
+  list-style: none;
+}
+
+img, picture, video, canvas {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+label {
+  display: block;
+}
+
+button, input, textarea, select {
+  font: inherit;
+}
+
+textarea {
+  resize: none;
+}
+
+table {
+  border-spacing: 0;
+}

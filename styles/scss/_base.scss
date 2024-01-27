@@ -1,0 +1,81 @@
+//* fonts
+
+@font-face {
+  font-family: customFont;
+  src: url("/fonts/Shabnam.ttf"), url("/fonts/Shabnam.woff");
+  font-weight: normal;
+}
+
+$fm--primary: customFont;
+
+//* colors
+
+$clr--primary: #C39F76;
+$clr--secondary: #F42267;
+$clr--tertiary: #3498DB;
+
+//* neutral colors
+
+$clr--bg--light: #FFF;
+$clr--bg--gray: #EDEDED;
+$clr--bg--dark: #2E2E2E;
+
+// text only
+$clr--text--light: #FFF;
+$clr--text--gray: #9c9c9c;
+$clr--text--dark: #28262B;
+
+// other stuff like border colors
+$clr--light: #FFF;
+$clr--gray: #9c9c9c;
+$clr--dark: #28262B;
+
+//* font-sizes
+
+$fs--sm: 0.8rem; // 8px
+$fs--md: 1.6rem; // 16px
+$fs--xmd: 2.4rem; // 24px
+$fs--xxmd: 3.2rem; // 32px
+$fs--lg: 4.8rem; // 48px
+$fs--xlg: 6.4rem; // 64px
+$fs--xxlg: 8rem; // 80px
+
+//* spacing sizes
+
+$sp--sm: 0.8rem;
+$sp--md: 1.6rem;
+$sp--xmd: 2.4rem;
+$sp--lg: 3.2rem;
+
+//* mixins
+
+@mixin flexCenter($direction: row, $gap: 0) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: center;
+  align-items: center;
+  gap: $gap;
+}
+
+@mixin row($topAndBottomMargin: 0) {
+  width: 80%;
+  max-width: 100%;
+  margin: $topAndBottomMargin auto;
+  position: relative;
+}
+
+//* functions
+
+@function multiply($size, $identifier) {
+  @if ($identifier == "2") {
+    @return $size * 2;
+  } @else if ($identifier == "3") {
+    @return $size * 3;
+  } @else if ($identifier == "4") {
+    @return $size * 4;
+  } @else if ($identifier == "5") {
+    @return $size * 5;
+  } @else {
+    @return $size;
+  }
+}
