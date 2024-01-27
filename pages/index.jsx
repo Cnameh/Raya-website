@@ -1,4 +1,5 @@
 import Head from "next/head";
+import HeaderSlider from "../components/HeaderSlider";
 
 const HomePage = () => {
 
@@ -9,6 +10,7 @@ const HomePage = () => {
         <meta name="description" content="به سایت رایا خوش اومدید!" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
+      <HeaderSlider />
       <main>خانه</main>
     </>
   );

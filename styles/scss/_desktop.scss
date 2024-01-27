@@ -8,7 +8,7 @@
   top: 0;
   left: 0;
   right: 0;
-  z-index: 3;
+  z-index: 10;
   transition: 0.3s;
   &--logo {
     width: $size--lg;
@@ -81,5 +81,73 @@
   }
   &--user--location--link {
     color: $clr--text--dark;
+  }
+}
+
+.header--slider {
+  height: 100vh;
+  .swiper-slide {
+    @include flexCenter;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    // &::after {
+    //   content: "";
+    //   position: absolute;
+    //   background-color: rgba($color: #000000, $alpha: 0.5);
+    //   width: 100%;
+    //   height: 100%;
+    //   z-index: -1;
+    // }
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: rgba($color: $clr--light, $alpha: 0.5);
+    margin-inline: 2%;
+    transition: 0.3s;
+    &::after {
+      font-size: 2.4rem;
+    }
+    &:hover {
+      color: rgba($color: $clr--light, $alpha: 1);
+    }
+  }
+  // .swiper-slide img {
+  //   display: block;
+  //   width: 100%;
+  //   height: 100%;
+  //   object-fit: cover;
+  // }
+  &--content {
+    max-width: 60%;
+    text-align: center;
+  }
+  &--title {
+    display: block;
+    color: $clr--text--light;
+    font-size: $fs--xmd;
+    margin-bottom: 1em;
+  }
+  &--description {
+    color: $clr--text--light;
+    font-size: $fs--xlg;
+    margin-bottom: .5em;
+    text-wrap: wrap;
+  }
+  &--btn {
+    color: $clr--text--light;
+    font-size: calc($fs--md + 0.4rem);
+    font-weight: bold;
+    padding: 0.4em 2em;
+    border: 2px solid $clr--secondary;
+    background-color: $clr--secondary;
+    border-radius: 2em;
+    cursor: pointer;
+    transition: 0.4s;
+    &:hover {
+      background-color: transparent;
+    }
   }
 }

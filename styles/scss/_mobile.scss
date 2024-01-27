@@ -9,7 +9,7 @@
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1;
+    z-index: 10;
     transition: 0.3s;
     &--logo {
       width: $size--xlg;
@@ -72,12 +72,80 @@
       bottom: 0;
       background-color: $clr--bg--light;
       color: $clr--text--dark;
-      font-size: $fs--xmd;
+      font-size: $fs--md;
       padding: 0.5em;
       border-radius: 0.2em 0.2em 0 0;
     }
     &--user--location--link {
       color: $clr--text--dark;
+    }
+  }
+
+  .header--slider {
+    height: 100vh;
+    .swiper-slide {
+      @include flexCenter;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      background-attachment: fixed;
+      position: relative;
+      // &::after {
+      //   content: "";
+      //   position: absolute;
+      //   background-color: rgba($color: #000000, $alpha: 0.5);
+      //   width: 100%;
+      //   height: 100%;
+      //   z-index: -1;
+      // }
+    }
+    .swiper-button-prev,
+    .swiper-button-next {
+      color: rgba($color: $clr--light, $alpha: 0.5);
+      margin-inline: 2%;
+      transition: 0.3s;
+      &::after {
+        font-size: 2.4rem;
+      }
+      &:hover {
+        color: rgba($color: $clr--light, $alpha: 1);
+      }
+    }
+    // .swiper-slide img {
+    //   display: block;
+    //   width: 100%;
+    //   height: 100%;
+    //   object-fit: cover;
+    // }
+    &--content {
+      // max-width: 45%;
+      text-align: center;
+    }
+    &--title {
+      display: block;
+      color: $clr--text--light;
+      font-size: $fs--md;
+      margin-bottom: 1em;
+    }
+    &--description {
+      color: $clr--text--light;
+      font-size: $fs--xxmd;
+      margin-bottom: 1em;
+      // text-wrap: wrap;
+    }
+    &--btn {
+      color: $clr--text--light;
+      font-size: calc($fs--md + 0.4rem);
+      font-weight: bold;
+      padding: 0.4em 2em;
+      border: 2px solid $clr--secondary;
+      background-color: $clr--secondary;
+      border-radius: 2em;
+      cursor: pointer;
+      transition: 0.4s;
+      &:hover {
+        background-color: transparent;
+      }
     }
   }
 }
