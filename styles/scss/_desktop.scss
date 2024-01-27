@@ -4,14 +4,14 @@
   align-items: center;
   padding: 1.5rem 3%;
   position: fixed;
-  background-color: $clr--bg--dark;
+  // background-color: $clr--bg--dark;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1;
+  z-index: 3;
   transition: 0.3s;
   &--logo {
-    width: multiply($fs--lg, "2");
+    width: $size--lg;
     object-fit: contain;
     // cursor: pointer;
   }
@@ -22,19 +22,64 @@
   &--link {
     color: $clr--text--light;
     font-size: $fs--md;
+    font-weight: bold;
     padding-block: 0.5em;
   }
   &--link--active {
     color: $clr--primary;
   }
+  &--icons {
+    display: flex;
+    gap: 3em;
+  }
   &--search--icon {
-    fill: #fff;
-    width: $fs--md;
+    width: $size--sm;
+    fill: $clr--light;
     aspect-ratio: 1;
     cursor: pointer;
     transition: 0.3s;
     &:hover {
       fill: rgba($color: $clr--light, $alpha: 0.5);
     }
+  }
+  &--bars--icon {
+    display: none;
+    width: $size--sm;
+    fill: $clr--light;
+    aspect-ratio: 1;
+    cursor: pointer;
+    transition: 0.3s;
+    &:hover {
+      fill: rgba($color: $clr--light, $alpha: 0.5);
+    }
+  }
+  &--stick {
+    background-color: rgba($color: #000000, $alpha: 0.7);
+  }
+}
+
+.banner {
+  height: 78vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left center;
+  background-attachment: fixed;
+  position: relative;
+  @include flexCenter;
+  &--title {
+    color: $clr--text--light;
+    font-size: $fs--lg;
+  }
+  &--user--location {
+    position: absolute;
+    bottom: 0;
+    background-color: $clr--bg--light;
+    color: $clr--text--dark;
+    font-size: $fs--md;
+    padding: 0.5em;
+    border-radius: 0.2em 0.2em 0 0;
+  }
+  &--user--location--link {
+    color: $clr--text--dark;
   }
 }

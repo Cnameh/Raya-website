@@ -19,6 +19,8 @@ body {
   font-family: $fm--primary;
   min-height: 100vh;
   font-size: 1.6rem;
+  scroll-behavior: smooth;
+  // height: 3000px;
 }
 
 ul, ol, dl {
@@ -48,4 +50,9 @@ textarea {
 
 table {
   border-spacing: 0;
+}
+
+::selection {
+  background-color: #1B1B1B;
+  color: $clr--text--light;
 }

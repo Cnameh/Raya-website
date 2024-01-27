@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Layout from "../layout";
 
 const OurTeam = () => {
   return (
@@ -8,7 +9,9 @@ const OurTeam = () => {
         <meta name="description" content="به سایت رایا خوش اومدید!" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <main>تیم ما</main>
+      <Layout>
+        <main>تیم ما</main>
+      </Layout>
     </>
   );
 };

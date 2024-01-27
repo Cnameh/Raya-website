@@ -1,0 +1,83 @@
+@media screen and (max-width: $tablet--sc) {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 3%;
+    position: fixed;
+    // background-color: $clr--bg--dark;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    transition: 0.3s;
+    &--logo {
+      width: $size--xlg;
+      object-fit: contain;
+      // cursor: pointer;
+    }
+    &--links {
+      display: none;
+      gap: 2.5em;
+    }
+    &--link {
+      color: $clr--text--light;
+      font-size: $fs--xmd;
+      padding-block: 0.5em;
+    }
+    &--link--active {
+      color: $clr--primary;
+    }
+    &--icons {
+      display: flex;
+      gap: 4em;
+    }
+    &--search--icon {
+      width: $size--md;
+      fill: $clr--light;
+      aspect-ratio: 1;
+      cursor: pointer;
+      transition: 0.3s;
+      &:hover {
+        fill: rgba($color: $clr--light, $alpha: 0.5);
+      }
+    }
+    &--bars--icon {
+      display: block;
+      width: $size--md;
+      fill: $clr--light;
+      aspect-ratio: 1;
+      cursor: pointer;
+      transition: 0.3s;
+      &:hover {
+        fill: rgba($color: $clr--light, $alpha: 0.5);
+      }
+    }
+  }
+
+  .banner {
+    height: 78vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    @include flexCenter;
+    &--title {
+      color: $clr--text--light;
+      font-size: $fs--lg;
+    }
+    &--user--location {
+      position: absolute;
+      bottom: 0;
+      background-color: $clr--bg--light;
+      color: $clr--text--dark;
+      font-size: $fs--xmd;
+      padding: 0.5em;
+      border-radius: 0.2em 0.2em 0 0;
+    }
+    &--user--location--link {
+      color: $clr--text--dark;
+    }
+  }
+}
