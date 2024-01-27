@@ -47,6 +47,13 @@ $sp--md: 1.6rem;
 $sp--xmd: 2.4rem;
 $sp--lg: 3.2rem;
 
+//* breakpoints
+
+$mobile--sc: 50rem; // 500px
+$tablet--sc: 80rem; // 800px
+$desktop--sc: 120rem; // 1200px
+$lg--desktop--sc: 160rem; // 1600px
+
 //* mixins
 
 @mixin flexCenter($direction: row, $gap: 0) {

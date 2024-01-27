@@ -1,0 +1,40 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 3%;
+  position: fixed;
+  background-color: $clr--bg--dark;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  transition: 0.3s;
+  &--logo {
+    width: multiply($fs--lg, "2");
+    object-fit: contain;
+    // cursor: pointer;
+  }
+  &--links {
+    display: flex;
+    gap: 2.5em;
+  }
+  &--link {
+    color: $clr--text--light;
+    font-size: $fs--md;
+    padding-block: 0.5em;
+  }
+  &--link--active {
+    color: $clr--primary;
+  }
+  &--search--icon {
+    fill: #fff;
+    width: $fs--md;
+    aspect-ratio: 1;
+    cursor: pointer;
+    transition: 0.3s;
+    &:hover {
+      fill: rgba($color: $clr--light, $alpha: 0.5);
+    }
+  }
+}

@@ -53,4 +53,45 @@ textarea {
 
 table {
   border-spacing: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 3%;
+  position: fixed;
+  background-color: #2E2E2E;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  transition: 0.3s;
+}
+.navbar--logo {
+  width: 9.6rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.navbar--links {
+  display: flex;
+  gap: 2.5em;
+}
+.navbar--link {
+  color: #FFF;
+  font-size: 1.6rem;
+  padding-block: 0.5em;
+}
+.navbar--link--active {
+  color: #C39F76;
+}
+.navbar--search--icon {
+  fill: #fff;
+  width: 1.6rem;
+  aspect-ratio: 1;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.navbar--search--icon:hover {
+  fill: rgba(255, 255, 255, 0.5);
 }/*# sourceMappingURL=root.css.map */
