@@ -1,8 +1,8 @@
 //? variables, mixins, extends, functions ...
-@import "base";
+@import "1-abstracts/";
 
-//? css reset
-@import "reset";
+//? css reset & general stylings
+@import "2-base/";
 
 //? media queries
 @import "desktop";

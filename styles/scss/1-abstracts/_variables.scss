@@ -1,0 +1,57 @@
+//* fonts
+
+@font-face {
+  font-family: customFont;
+  src: url("/fonts/Shabnam.ttf");
+  src: url("/fonts/Shabnam.woff");
+  font-weight: normal;
+}
+
+$fm--primary: customFont;
+
+//* colors
+
+$clr--primary: #c39f76;
+$clr--secondary: #f42267;
+$clr--tertiary: #3498db;
+
+//* neutral colors
+
+$clr--bg--light: #fff;
+$clr--bg--gray: #ededed;
+$clr--bg--dark: #2e2e2e;
+
+// text only
+$clr--text--light: #fff;
+$clr--text--gray: #9c9c9c;
+$clr--text--dark: #28262b;
+
+// other stuff like border colors
+$clr--light: #fff;
+$clr--gray: #9c9c9c;
+$clr--dark: #28262b;
+
+//* font-sizes
+
+$fs--sm: 1.6rem;
+$fs--md: 2.4rem;
+$fs--xmd: 3.2rem;
+$fs--xxmd: 4rem;
+$fs--lg: 4.8rem;
+$fs--xlg: 5.6rem;
+$fs--xxlg: 6.4rem;
+
+//* sizes for other stuff like imgs or svgs
+
+$size--sm: 1.6rem;
+$size--md: 3.2rem;
+$size--xmd: 4.8rem;
+$size--lg: 6.4rem;
+$size--xlg: 8rem;
+
+//* spacing sizes
+
+$sp--sm: 0.8rem;
+$sp--md: 1.6rem;
+$sp--xmd: 2.4rem;
+$sp--lg: 3.2rem;

@@ -1,0 +1,13 @@
+@function multiply($size, $identifier) {
+  @if ($identifier == "2") {
+    @return $size * 2;
+  } @else if ($identifier == "3") {
+    @return $size * 3;
+  } @else if ($identifier == "4") {
+    @return $size * 4;
+  } @else if ($identifier == "5") {
+    @return $size * 5;
+  } @else {
+    @return $size;
+  }
+}

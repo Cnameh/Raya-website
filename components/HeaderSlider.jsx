@@ -13,7 +13,7 @@ const HeaderSlider = () => {
       className="header--slider"
       modules={[Navigation, Autoplay, EffectFade]}
       navigation={true}
-      autoplay={{ delay: 6000, disableOnInteraction: false }}
+      // autoplay={{ delay: 6000, disableOnInteraction: false }}
       loop={true}
       speed={1000}
       effect="fade"

@@ -10,7 +10,7 @@ export const navLinks = [
 export const HeaderSliderSlides = [
   {
     slideNumber: "1",
-    image: "/imgs/black-cover-03.jpg",
+    image: "/imgs/bg-suitman.jpg",
     title: "با رایا همراه شو",
     description: "تمام ایده ‌هایی که داری به واقعیت تبدیل کن!",
     btnContext: "بزن بریم!",

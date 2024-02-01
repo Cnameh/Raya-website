@@ -4,7 +4,6 @@
   align-items: center;
   padding: 1.5rem 3%;
   position: fixed;
-  // background-color: $clr--bg--dark;
   top: 0;
   left: 0;
   right: 0;
@@ -13,7 +12,6 @@
   &--logo {
     width: $size--lg;
     object-fit: contain;
-    // cursor: pointer;
   }
   &--links {
     display: flex;
@@ -21,7 +19,7 @@
   }
   &--link {
     color: $clr--text--light;
-    font-size: $fs--md;
+    font-size: $fs--sm;
     font-weight: bold;
     padding-block: 0.5em;
   }
@@ -36,8 +34,8 @@
     width: $size--sm;
     fill: $clr--light;
     aspect-ratio: 1;
-    cursor: pointer;
     transition: 0.3s;
+    cursor: pointer;
     &:hover {
       fill: rgba($color: $clr--light, $alpha: 0.5);
     }
@@ -47,35 +45,33 @@
     width: $size--sm;
     fill: $clr--light;
     aspect-ratio: 1;
-    cursor: pointer;
     transition: 0.3s;
+    cursor: pointer;
     &:hover {
       fill: rgba($color: $clr--light, $alpha: 0.5);
     }
   }
   &--stick {
-    background-color: rgba($color: #000000, $alpha: 0.7);
+    background-color: rgba($color: #282828, $alpha: 0.9);
   }
 }
 
 .banner {
   height: 78vh;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: left center;
+  @include flexCenter;
+  @include fullImage(left center);
   background-attachment: fixed;
   position: relative;
-  @include flexCenter;
   &--title {
     color: $clr--text--light;
-    font-size: $fs--lg;
+    font-size: $fs--xlg;
   }
   &--user--location {
     position: absolute;
     bottom: 0;
     background-color: $clr--bg--light;
     color: $clr--text--dark;
-    font-size: $fs--md;
+    font-size: $fs--sm;
     padding: 0.5em;
     border-radius: 0.2em 0.2em 0 0;
   }
@@ -88,9 +84,7 @@
   height: 100vh;
   .swiper-slide {
     @include flexCenter;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    @include fullImage;
     background-attachment: fixed;
     position: relative;
     // &::after {
@@ -121,33 +115,182 @@
   //   object-fit: cover;
   // }
   &--content {
-    max-width: 60%;
+    // max-width: 60%;
     text-align: center;
   }
   &--title {
     display: block;
     color: $clr--text--light;
-    font-size: $fs--xmd;
+    font-size: $fs--md;
     margin-bottom: 1em;
   }
   &--description {
     color: $clr--text--light;
-    font-size: $fs--xlg;
-    margin-bottom: .5em;
-    text-wrap: wrap;
+    font-size: $fs--lg;
+    margin-bottom: 1em;
+    text-wrap: balance;
   }
   &--btn {
     color: $clr--text--light;
-    font-size: calc($fs--md + 0.4rem);
+    font-size: $fs--md;
     font-weight: bold;
     padding: 0.4em 2em;
     border: 2px solid $clr--secondary;
     background-color: $clr--secondary;
     border-radius: 2em;
     cursor: pointer;
-    transition: 0.4s;
+    transition: 0.3s;
     &:hover {
       background-color: transparent;
     }
   }
+}
+
+.footer {
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-areas: "f-contact f-categories f-news f-portofolio";
+  gap: 1.6rem;
+  background-color: $clr--bg--dark;
+  padding: 3% 5%;
+  &--col {
+    padding: 1.6rem;
+  }
+  &--contact {
+    grid-area: f-contact;
+    // background-color: lightblue
+  }
+  &--categories {
+    grid-area: f-categories;
+    // background-color: lightgreen;
+  }
+  &--news {
+    grid-area: f-news;
+    // background-color: lightcoral;
+  }
+  &--portofolio {
+    grid-area: f-portofolio;
+    // background-color: lightseagreen;
+  }
+  &--title {
+    font-size: calc($fs--md - 0.4rem);
+    color: $clr--text--gray;
+    margin-bottom: 2em;
+  }
+  &--logo {
+    margin-bottom: 3.2rem;
+  }
+  &--description {
+    color: $clr--text--gray;
+    font-size: $fs--sm;
+    margin-bottom: 2em;
+  }
+  &--contact--paths > li {
+    display: flex;
+    align-items: center;
+    font-size: $fs--sm;
+    color: $clr--text--light;
+    &:not(:last-child) {
+      border-bottom: 1px dotted rgba($color: $clr--gray, $alpha: 0.5);
+      padding-bottom: 1em;
+      margin-bottom: 1em;
+    }
+    &:last-child > span {
+      color: $clr--primary;
+    }
+  }
+  &--icon {
+    margin-left: 1em;
+  }
+  &--categories--list > li {
+    list-style: square;
+    font-size: $fs--sm;
+    color: $clr--text--light;
+    transition: 0.3s;
+    &:not(:last-child) {
+      border-bottom: 1px dotted rgba($color: $clr--gray, $alpha: 0.5);
+      padding-bottom: 1em;
+      margin-bottom: 1em;
+    }
+    &::marker {
+      color: $clr--primary;
+    }
+    &:hover {
+      color: $clr--primary;
+      padding-right: 0.5em;
+    }
+  }
+  &--news--list--item {
+    display: flex;
+    &:not(:last-child) {
+      margin-bottom: 1.6rem;
+    }
+  }
+  &--news--title {
+    color: $clr--text--light;
+    font-weight: bold;
+    border-bottom: 1px dotted rgba($color: $clr--gray, $alpha: 0.5);
+    font-size: $fs--sm;
+    padding-right: 1em;
+    padding-bottom: 0.5em;
+    margin-bottom: 0.5em;
+    transition: 0.3s;
+    &:hover {
+      color: $clr--primary;
+    }
+  }
+  &--news--date {
+    font-size: $fs--sm;
+    color: $clr--text--gray;
+    padding: 1em 1em 0.5em 0;
+  }
+  &--news--subject {
+    color: $clr--text--light;
+    padding: 1em 1em 0.2em 0;
+  }
+  &--portofolio--imgs {
+    // height: fit-content;
+    display: grid;
+    grid-auto-columns: minmax(10rem, 20rem);
+    grid-template-areas:
+      "img-1 img-2 img-3"
+      "img-4 img-5 img-6";
+    gap: 1.6rem;
+    img {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      border-radius: 0.3rem;
+      transition: 0.3s;
+      cursor: pointer;
+      &:hover {
+        transform: scale(1.07);
+      }
+    }
+  }
+  --portofolio--img--1 {
+    grid-area: img-1;
+  }
+  --portofolio--img--2 {
+    grid-area: img-2;
+  }
+  --portofolio--img--3 {
+    grid-area: img-3;
+  }
+  --portofolio--img--4 {
+    grid-area: img-4;
+  }
+  --portofolio--img--5 {
+    grid-area: img-1;
+  }
+  --portofolio--img--6 {
+    grid-area: img-6;
+  }
+}
+
+.bottom--footer {
+  @include flexCenter;
+  background-color: #323232;
+  color: $clr--text--gray;
+  padding: 3rem 4.6rem;
 }
