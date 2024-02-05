@@ -1,0 +1,160 @@
+.footer {
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-areas: "f-contact f-categories f-news f-portofolio";
+  gap: 1.6rem;
+  background-color: $clr--bg--dark;
+  padding: 3% 5%;
+  @include md {
+    grid-template-areas:
+      "f-contact f-categories"
+      "f-news f-portofolio";
+  }
+  @include sm {
+    grid-template-areas:
+      "f-contact"
+      "f-categories"
+      "f-news"
+      "f-portofolio";
+  }
+  &--col {
+    padding: 1.6rem;
+  }
+  &--contact {
+    grid-area: f-contact;
+    // background-color: lightblue
+  }
+  &--categories {
+    grid-area: f-categories;
+    // background-color: lightgreen;
+  }
+  &--news {
+    grid-area: f-news;
+    // background-color: lightcoral;
+  }
+  &--portofolio {
+    grid-area: f-portofolio;
+    // background-color: lightseagreen;
+  }
+  &--title {
+    font-size: calc($fs--md - 0.4rem);
+    color: $clr--text--gray;
+    margin-bottom: 2em;
+  }
+  &--logo {
+    margin-bottom: 3.2rem;
+  }
+  &--description {
+    color: $clr--text--gray;
+    font-size: $fs--sm;
+    margin-bottom: 2em;
+  }
+  &--contact--paths > li {
+    display: flex;
+    align-items: center;
+    font-size: $fs--sm;
+    color: $clr--text--light;
+    &:not(:last-child) {
+      border-bottom: 1px dotted rgba($color: $clr--gray, $alpha: 0.5);
+      padding-bottom: 1em;
+      margin-bottom: 1em;
+    }
+    &:last-child > span {
+      color: $clr--primary;
+    }
+  }
+  &--icon {
+    margin-left: 1em;
+  }
+  &--categories--list > li {
+    list-style: square;
+    font-size: $fs--sm;
+    color: $clr--text--light;
+    transition: 0.3s;
+    &:not(:last-child) {
+      border-bottom: 1px dotted rgba($color: $clr--gray, $alpha: 0.5);
+      padding-bottom: 1em;
+      margin-bottom: 1em;
+    }
+    &::marker {
+      color: $clr--primary;
+    }
+    &:hover {
+      color: $clr--primary;
+      padding-right: 0.5em;
+    }
+  }
+  &--news--list--item {
+    display: flex;
+    &:not(:last-child) {
+      margin-bottom: 1.6rem;
+    }
+  }
+  &--news--title {
+    color: $clr--text--light;
+    font-weight: bold;
+    border-bottom: 1px dotted rgba($color: $clr--gray, $alpha: 0.5);
+    font-size: $fs--sm;
+    padding-right: 1em;
+    padding-bottom: 0.5em;
+    margin-bottom: 0.5em;
+    transition: 0.3s;
+    &:hover {
+      color: $clr--primary;
+    }
+  }
+  &--news--date {
+    font-size: $fs--sm;
+    color: $clr--text--gray;
+    padding: 1em 1em 0.5em 0;
+  }
+  &--news--subject {
+    color: $clr--text--light;
+    padding: 1em 1em 0.2em 0;
+  }
+  &--portofolio--imgs {
+    // height: fit-content;
+    display: grid;
+    grid-auto-columns: minmax(10rem, 20rem);
+    grid-template-areas:
+      "img-1 img-2 img-3"
+      "img-4 img-5 img-6";
+    gap: 1.6rem;
+    img {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      border-radius: 0.3rem;
+      transition: 0.3s;
+      cursor: pointer;
+      &:hover {
+        transform: scale(1.07);
+      }
+    }
+  }
+  &--portofolio--img--1 {
+    grid-area: img-1;
+  }
+  &--portofolio--img--2 {
+    grid-area: img-2;
+  }
+  &--portofolio--img--3 {
+    grid-area: img-3;
+  }
+  &--portofolio--img--4 {
+    grid-area: img-4;
+  }
+  &--portofolio--img--5 {
+    grid-area: img-5;
+  }
+  &--portofolio--img--6 {
+    grid-area: img-6;
+  }
+}
+
+.bottom--footer {
+  @include flexCenter;
+  background-color: #323232;
+  color: $clr--text--gray;
+  padding: 3rem 4.6rem;
+}

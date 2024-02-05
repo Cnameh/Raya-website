@@ -101,36 +101,48 @@ const Footer = ({ bottomFooter }) => {
           <div className="footer--col footer--portofolio">
             <h3 className="footer--title">نمونه کارها</h3>
             <div className="footer--portofolio--imgs">
-              <img
-                src="/imgs/man-01.jpg"
-                alt="نمونه کار-1"
-                className="footer--portofolio--img--1"
-              />
-              <img
-                src="/imgs/woman-01.jpg"
-                alt="نمونه کار-2"
-                className="footer--portofolio--img--2"
-              />
-              <img
-                src="/imgs/man-02.jpg"
-                alt="نمونه کار-3"
-                className="footer--portofolio--img--3"
-              />
-              <img
-                src="/imgs/woman-02.jpg"
-                alt="نمونه کار-4"
-                className="footer--portofolio--img--4"
-              />
-              <img
-                src="/imgs/man-03.jpg"
-                alt="نمونه کار-5"
-                className="footer--portofolio--img--5"
-              />
-              <img
-                src="/imgs/woman-03.jpg"
-                alt="نمونه کار-6"
-                className="footer--portofolio--img--6"
-              />
+              <Link href="/">
+                <img
+                  src="/imgs/man-01.jpg"
+                  alt="نمونه کار-1"
+                  className="footer--portofolio--img--1"
+                />
+              </Link>
+              <Link href="/">
+                <img
+                  src="/imgs/woman-01.jpg"
+                  alt="نمونه کار-2"
+                  className="footer--portofolio--img--2"
+                />
+              </Link>
+              <Link href="/">
+                <img
+                  src="/imgs/man-02.jpg"
+                  alt="نمونه کار-3"
+                  className="footer--portofolio--img--3"
+                />
+              </Link>
+              <Link href="/">
+                <img
+                  src="/imgs/woman-02.jpg"
+                  alt="نمونه کار-4"
+                  className="footer--portofolio--img--4"
+                />
+              </Link>
+              <Link href="/">
+                <img
+                  src="/imgs/man-03.jpg"
+                  alt="نمونه کار-5"
+                  className="footer--portofolio--img--5"
+                />
+              </Link>
+              <Link href="/">
+                <img
+                  src="/imgs/woman-03.jpg"
+                  alt="نمونه کار-6"
+                  className="footer--portofolio--img--6"
+                />
+              </Link>
             </div>
           </div>
         </footer>

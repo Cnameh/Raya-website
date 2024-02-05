@@ -4,7 +4,8 @@
 //? css reset & general stylings
 @import "2-base/";
 
-//? media queries
-@import "desktop";
-@import "tablet";
-@import "mobile";
+//? elemets like navbar & footer
+@import "3-layouts/";
+
+//? every page's specific content
+@import "4-pages/";

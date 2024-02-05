@@ -1,0 +1,23 @@
+.banner {
+  height: 78vh;
+  @include flexCenter;
+  @include fullImage(left center);
+  background-attachment: fixed;
+  position: relative;
+  &--title {
+    color: $clr--text--light;
+    font-size: $fs--xlg;
+  }
+  &--user--location {
+    position: absolute;
+    bottom: 0;
+    background-color: $clr--bg--light;
+    color: $clr--text--dark;
+    font-size: $fs--sm;
+    padding: 0.5em;
+    border-radius: 0.2em 0.2em 0 0;
+  }
+  &--user--location--link {
+    color: $clr--text--dark;
+  }
+}

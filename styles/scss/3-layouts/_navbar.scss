@@ -1,0 +1,69 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 3%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  transition: 0.3s;
+  &--logo {
+    width: $size--lg;
+    object-fit: contain;
+  }
+  &--links {
+    display: flex;
+    gap: 2.5em;
+    @include sm {
+      display: none;
+    }
+  }
+  &--link {
+    color: $clr--text--light;
+    font-size: $fs--sm;
+    font-weight: bold;
+    padding-block: 0.5em;
+  }
+  &--link--active {
+    color: $clr--primary;
+  }
+  &--icons {
+    display: flex;
+    gap: 3em;
+  }
+  &--search--icon {
+    width: $size--sm;
+    fill: $clr--light;
+    aspect-ratio: 1;
+    transition: 0.3s;
+    cursor: pointer;
+    &:hover {
+      fill: rgba($color: $clr--light, $alpha: 0.5);
+    }
+    @include sm {
+      $size--sm: 2.4rem;
+      width: $size--sm;
+    }
+  }
+  &--bars--icon {
+    display: none;
+    width: $size--sm;
+    fill: $clr--light;
+    aspect-ratio: 1;
+    transition: 0.3s;
+    cursor: pointer;
+    &:hover {
+      fill: rgba($color: $clr--light, $alpha: 0.5);
+    }
+    @include sm {
+      $size--sm: 2.4rem;
+      width: $size--sm;
+      display: block;
+    }
+  }
+  &--stick {
+    background-color: rgba($color: #282828, $alpha: 0.9);
+  }
+}

@@ -1,7 +1,12 @@
 import Head from "next/head";
+
+// components
 import HeaderSlider from "../components/HeaderSlider";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import Features from "../components/Features";
+import Templates from "../components/Templates";
+import Findout from "../components/Findout";
 
 const HomePage = () => {
   return (
@@ -15,7 +20,11 @@ const HomePage = () => {
         <Navbar />
         <HeaderSlider />
       </header>
-      <main></main>
+      <main>
+        <Features />
+        <Templates />
+        <Findout />
+      </main>
       <Footer />
       <Footer bottomFooter />
     </>

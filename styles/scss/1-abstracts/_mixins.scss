@@ -7,8 +7,8 @@
 }
 
 @mixin row($topAndBottomMargin: 0) {
-  width: 80%;
-  max-width: 100%;
+  width: 93%;
+  max-width: 120rem;
   margin: $topAndBottomMargin auto;
   position: relative;
 }

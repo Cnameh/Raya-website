@@ -1,0 +1,324 @@
+.features {
+  @include row;
+  text-align: center;
+  &--small--title {
+    font-size: $fs--md;
+  }
+  &--big--title {
+    font-size: $fs--xxmd;
+    text-wrap: balance;
+  }
+  &--description {
+    max-width: 80ch;
+    margin-inline: auto;
+  }
+  &--img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 1.6rem;
+  }
+  &--list {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-areas: "list-item-1 list-item-2 list-item-3";
+    gap: 1.6rem;
+    @include md {
+      grid-template-areas:
+        "list-item-1"
+        "list-item-2"
+        "list-item-3";
+      gap: 3.2rem;
+    }
+    @include sm {
+      grid-template-areas:
+        "list-item-1"
+        "list-item-2"
+        "list-item-3";
+      gap: 3.2rem;
+    }
+  }
+  &--list--item {
+    &:hover .features--list--detail {
+      transform: translateY(30%);
+      opacity: 1;
+      @include md {
+        transform: translateY(40%);
+      }
+    }
+    &:hover .features--list--number {
+      background-color: $clr--secondary;
+      color: $clr--text--light;
+    }
+  }
+  &--list--number {
+    @include flexCenter;
+    color: $clr--text--dark;
+    font-size: $fs--xmd;
+    width: 9rem;
+    aspect-ratio: 1;
+    border: 2px solid $clr--secondary;
+    border-radius: 50%;
+    font-weight: bold;
+    margin-inline: auto;
+    transition: 0.3s;
+  }
+  &--list--title {
+    font-size: calc($fs--sm + 0.2rem);
+    margin-bottom: 1em;
+  }
+  &--list--description {
+    color: $clr--text--gray;
+  }
+  &--list--detail {
+    color: $clr--text--gray;
+    transform: translateY(50%);
+    opacity: 0;
+    transition: 0.3s;
+    @include md {
+      transform: translateY(60%);
+    }
+  }
+}
+
+.templates {
+  background-color: $clr--bg--gray;
+  &--container {
+    @include row;
+    height: 100%;
+    display: flex;
+    gap: 3.2rem;
+    @include md {
+      flex-direction: column;
+    }
+    @include sm {
+      flex-direction: column;
+    }
+  }
+  &--context--container {
+    width: 40%;
+    @include md {
+      width: 100%;
+    }
+    @include sm {
+      width: 100%;
+    }
+  }
+  &--img--container {
+    width: 60%;
+    background-color: lightblue;
+    position: relative;
+    > img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+    @include md {
+      width: 100%;
+    }
+    @include sm {
+      width: 100%;
+    }
+  }
+  &--small--title {
+    font-size: $fs--sm;
+    color: $clr--text--dark;
+  }
+  &--big--title {
+    font-size: $fs--xmd;
+    color: $clr--text--dark;
+    text-wrap: balance;
+  }
+  &--description {
+    color: $clr--text--dark;
+  }
+  &--documents {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    @include md {
+      margin-block: 2rem;
+    }
+    @include sm {
+      margin-block: 2rem;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 2rem;
+    }
+  }
+  &--documents--item {
+    text-align: center;
+  }
+  &--documents--icon {
+    color: $clr--light;
+    background-color: $clr--tertiary;
+    font-size: 4rem;
+    width: 9rem;
+    aspect-ratio: 1;
+    @include flexCenter;
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+  }
+  &--documents--title {
+    color: $clr--text--dark;
+    font-size: calc($fs--sm + 0.4rem);
+  }
+  &--documents--description {
+    color: $clr--text--gray;
+    margin-bottom: 1em;
+    display: block;
+  }
+  &--documents--detail {
+    color: $clr--text--gray;
+  }
+}
+
+.findout {
+  background-color: $clr--bg--dark;
+  &--container {
+    @include row;
+    height: 100%;
+  }
+  &--content {
+    display: flex;
+    gap: 4.8rem;
+    @include md {
+      flex-direction: column;
+    }
+    @include sm {
+      flex-direction: column;
+    }
+  }
+  &--video {
+    @include fullImage;
+    width: 50%;
+    position: relative;
+    @include md {
+      width: 100%;
+    }
+    @include sm {
+      width: 100%;
+    }
+    > img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      border-radius: 1.6rem;
+      object-fit: cover;
+      @include md {
+        aspect-ratio: 16 / 9;
+      }
+      @include sm {
+        aspect-ratio: 16 / 9;
+      }
+    }
+  }
+  &--play--icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $clr--light;
+    font-size: 7rem;
+    padding: 1.6rem;
+    background-color: $clr--secondary;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  &--context {
+    width: 50%;
+    @include md {
+      width: 100%;
+    }
+    @include sm {
+      width: 100%;
+    }
+  }
+  &--small--title {
+    color: $clr--text--gray;
+  }
+  &--big--title {
+    color: $clr--text--light;
+    text-wrap: balance;
+    font-size: $fs--xmd;
+  }
+  &--description {
+    color: $clr--text--light;
+  }
+  &--btn {
+    font-size: $fs--sm;
+    font-weight: bold;
+    padding: 0.5em 2em;
+    border: 2px solid $clr--secondary;
+    border-radius: 3.2rem;
+    color: $clr--text--light;
+    cursor: pointer;
+    transition: 0.3s;
+    &:hover {
+      background-color: $clr--secondary;
+    }
+  }
+  &--statistics {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-areas: "item-1 item-2 item-3 item-4";
+    gap: 2rem;
+    @include md {
+      grid-template-areas:
+        "item-1 item-2"
+        "item-3 item-4";
+    }
+    @include sm {
+      grid-template-areas:
+        "item-1"
+        "item-2"
+        "item-3"
+        "item-4";
+    }
+  }
+  &--statistics--item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // gap: 1.6rem;
+    @include md {
+      padding-bottom: 2rem;
+    }
+    @include sm {
+      align-items: flex-start;
+      border-bottom: 1px dotted rgba($color: $clr--gray, $alpha: 0.5);
+      padding-bottom: 2rem;
+    }
+  }
+  &--statistics-item-1 {
+    grid-area: item-1;
+  }
+  &--statistics-item-2 {
+    grid-area: item-2;
+  }
+  &--statistics-item-3 {
+    grid-area: item-3;
+  }
+  &--statistics-item-4 {
+    grid-area: item-4;
+  }
+  &--statistics--number {
+    color: $clr--tertiary;
+    font-weight: bold;
+    font-size: $fs--xxmd;
+  }
+  &--statistics--topic {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+  }
+  &--statistics--icon {
+    color: rgba($color: $clr--text--gray, $alpha: 0.3);
+    font-size: $fs--xxmd;
+  }
+  &--statistics--title {
+    font-size: $fs--md;
+    color: $clr--text--light;
+  }
+  &--statistics--detail {
+    color: rgba($color: $clr--text--gray, $alpha: 0.5);
+  }
+}
