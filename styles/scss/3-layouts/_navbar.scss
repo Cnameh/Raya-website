@@ -1,14 +1,18 @@
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.5rem 3%;
+  // padding: 1.5rem 3%;
+  padding-block: 1.5rem;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 10;
   transition: 0.3s;
+  &--container {
+    @include row(160rem);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
   &--logo {
     width: $size--lg;
     object-fit: contain;
@@ -16,6 +20,12 @@
   &--links {
     display: flex;
     gap: 2.5em;
+    @include lg {
+      display: none;
+    }
+    @include md {
+      display: none;
+    }
     @include sm {
       display: none;
     }
@@ -42,6 +52,14 @@
     &:hover {
       fill: rgba($color: $clr--light, $alpha: 0.5);
     }
+    @include lg {
+      $size--sm: 2.4rem;
+      width: $size--sm;
+    }
+    @include md {
+      $size--sm: 2.4rem;
+      width: $size--sm;
+    }
     @include sm {
       $size--sm: 2.4rem;
       width: $size--sm;
@@ -56,6 +74,16 @@
     cursor: pointer;
     &:hover {
       fill: rgba($color: $clr--light, $alpha: 0.5);
+    }
+    @include lg {
+      $size--sm: 2.4rem;
+      width: $size--sm;
+      display: block;
+    }
+    @include md {
+      $size--sm: 2.4rem;
+      width: $size--sm;
+      display: block;
     }
     @include sm {
       $size--sm: 2.4rem;

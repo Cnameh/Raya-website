@@ -25,7 +25,6 @@ const Templates = () => {
               <div className="templates--documents--icon">
                 <IoDocumentTextOutline />
               </div>
-
               <h4 className="templates--documents--title">
                 لورم ایپسوم متن ساختگی
               </h4>
@@ -55,7 +54,7 @@ const Templates = () => {
           </div>
         </div>
         <div className="templates--img--container">
-          <img src="/imgs/bg-templates.jpg" alt="" />
+          <img src="/imgs/bg-templates.jpg" alt="عکس" />
         </div>
       </div>
       <div className="spacer"></div>

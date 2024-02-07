@@ -7,6 +7,10 @@ import Footer from "../components/Footer";
 import Features from "../components/Features";
 import Templates from "../components/Templates";
 import Findout from "../components/Findout";
+import HomeServices from "../components/HomeServices";
+import HomeContact from "../components/HomeContact";
+import HomeInfo from "../components/HomeInfo";
+import HomeMotto from "../components/HomeMotto";
 
 const HomePage = () => {
   return (
@@ -15,6 +19,7 @@ const HomePage = () => {
         <title>رایا</title>
         <meta name="description" content="به سایت رایا خوش اومدید!" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="website icon" href="/imgs/logo-little.png" type="image/icon" />
       </Head>
       <header>
         <Navbar />
@@ -24,6 +29,10 @@ const HomePage = () => {
         <Features />
         <Templates />
         <Findout />
+        <HomeServices />
+        <HomeContact />
+        <HomeInfo />
+        <HomeMotto />
       </main>
       <Footer />
       <Footer bottomFooter />

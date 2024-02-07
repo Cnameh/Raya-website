@@ -4,9 +4,24 @@
   @include fullImage(left center);
   background-attachment: fixed;
   position: relative;
+  @include md {
+    background-position: center;
+  }
+  @include sm {
+    background-position: center;
+  }
   &--title {
     color: $clr--text--light;
-    font-size: $fs--xlg;
+    font-size: $fs--lg;
+    @include lg {
+      font-size: $fs--xxmd;
+    }
+    @include md {
+      font-size: $fs--xmd;
+    }
+    @include sm {
+      font-size: calc($fs--lg - 2rem);
+    }
   }
   &--user--location {
     position: absolute;

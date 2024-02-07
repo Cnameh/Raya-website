@@ -6,11 +6,10 @@
   gap: $gap;
 }
 
-@mixin row($topAndBottomMargin: 0) {
-  width: 93%;
-  max-width: 120rem;
+@mixin row($maxWidth: 120rem, $topAndBottomMargin: 0) {
+  width: 94%;
+  max-width: $maxWidth;
   margin: $topAndBottomMargin auto;
-  position: relative;
 }
 
 @mixin fullImage($pos: center) {

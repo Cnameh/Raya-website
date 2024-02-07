@@ -33,32 +33,41 @@
   //   object-fit: cover;
   // }
   &--content {
-    // max-width: 60%;
+    max-width: 80%;
     text-align: center;
-    @include md {
-      max-width: 85%;
-    }
-    @include sm {
-      max-width: 85%;
-    }
   }
   &--title {
     display: block;
     color: $clr--text--light;
     font-size: $fs--md;
-    margin-bottom: 1em;
+    margin-bottom: 2.4rem;
+    @include md {
+      font-size: calc($fs--md - 0.4rem);
+    }
+    @include sm {
+      font-size: calc($fs--md - 0.4rem);
+    }
   }
   &--description {
     color: $clr--text--light;
     font-size: $fs--lg;
-    margin-bottom: 1em;
+    margin-bottom: 3rem;
     text-wrap: balance;
+    @include lg {
+      font-size: $fs--xxmd;
+    }
+    @include md {
+      font-size: $fs--xmd;
+    }
+    @include sm {
+      font-size: calc($fs--lg - 2rem);
+    }
   }
   &--btn {
     color: $clr--text--light;
-    font-size: $fs--md;
+    font-size: $fs--sm;
     font-weight: bold;
-    padding: 0.4em 2em;
+    padding: 0.5em 2em;
     border: 2px solid $clr--secondary;
     background-color: $clr--secondary;
     border-radius: 2em;
