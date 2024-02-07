@@ -1,7 +1,11 @@
+import Layout from "../layout";
+
 const SinglePortofolioPage = () => {
   return (
-    <div>SinglePortofolioPage</div>
-  )
-}
+    <Layout>
+      <div>SinglePortofolioPage</div>
+    </Layout>
+  );
+};
 
 export default SinglePortofolioPage;

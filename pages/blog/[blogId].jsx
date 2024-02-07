@@ -1,7 +1,11 @@
+import Layout from "../layout";
+
 const SingleBlogPage = () => {
   return (
-    <div>SingleBlogPage</div>
-  )
-}
+    <Layout>
+      <div>SingleBlogPage</div>
+    </Layout>
+  );
+};
 
 export default SingleBlogPage;

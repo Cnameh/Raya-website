@@ -1,43 +1,54 @@
 .footer {
-  display: grid;
-  grid-auto-columns: 1fr;
-  grid-template-areas: "f-contact f-categories f-news f-portofolio";
-  gap: 1.6rem;
   background-color: $clr--bg--dark;
-  padding: 3% 5%;
-  @include md {
-    grid-template-areas:
-      "f-contact f-categories"
-      "f-news f-portofolio";
-  }
-  @include sm {
-    grid-template-areas:
-      "f-contact"
-      "f-categories"
-      "f-news"
-      "f-portofolio";
+  padding-block: 3%;
+  &--row {
+    @include row(160rem);
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-areas: "f-contact f-categories f-news f-portofolio";
+    gap: 1.6rem;
+    @include bp("range", 1025px, 1300px) {
+      grid-template-areas:
+        "f-contact f-categories"
+        "f-news f-portofolio";
+    }
+    @include lg {
+      grid-template-areas:
+        "f-contact f-categories"
+        "f-news f-portofolio";
+    }
+    @include md {
+      grid-template-areas:
+        "f-contact"
+        "f-categories"
+        "f-news"
+        "f-portofolio";
+    }
+    @include sm {
+      grid-template-areas:
+        "f-contact"
+        "f-categories"
+        "f-news"
+        "f-portofolio";
+    }
   }
   &--col {
     padding: 1.6rem;
   }
   &--contact {
     grid-area: f-contact;
-    // background-color: lightblue
   }
   &--categories {
     grid-area: f-categories;
-    // background-color: lightgreen;
   }
   &--news {
     grid-area: f-news;
-    // background-color: lightcoral;
   }
   &--portofolio {
     grid-area: f-portofolio;
-    // background-color: lightseagreen;
   }
   &--title {
-    font-size: calc($fs--md - 0.4rem);
+    font-size: calc($fs--sm + 0.2rem);
     color: $clr--text--gray;
     margin-bottom: 2em;
   }
@@ -46,13 +57,13 @@
   }
   &--description {
     color: $clr--text--gray;
-    font-size: $fs--sm;
+    font-size: calc($fs--sm - 0.2rem);
     margin-bottom: 2em;
   }
   &--contact--paths > li {
     display: flex;
     align-items: center;
-    font-size: $fs--sm;
+    font-size: calc($fs--sm - 0.2rem);
     color: $clr--text--light;
     &:not(:last-child) {
       border-bottom: 1px dotted rgba($color: $clr--gray, $alpha: 0.5);
@@ -68,7 +79,7 @@
   }
   &--categories--list > li {
     list-style: square;
-    font-size: $fs--sm;
+    font-size: calc($fs--sm - 0.2rem);
     color: $clr--text--light;
     transition: 0.3s;
     &:not(:last-child) {
@@ -94,7 +105,7 @@
     color: $clr--text--light;
     font-weight: bold;
     border-bottom: 1px dotted rgba($color: $clr--gray, $alpha: 0.5);
-    font-size: $fs--sm;
+    font-size: calc($fs--sm - 0.2rem);
     padding-right: 1em;
     padding-bottom: 0.5em;
     margin-bottom: 0.5em;
@@ -104,16 +115,17 @@
     }
   }
   &--news--date {
-    font-size: $fs--sm;
+    font-size: calc($fs--sm - 0.3rem);
     color: $clr--text--gray;
     padding: 1em 1em 0.5em 0;
   }
   &--news--subject {
+    font-size: calc($fs--sm - 0.3rem);
     color: $clr--text--light;
-    padding: 1em 1em 0.2em 0;
+    margin: 1em 1em 0.2em 0;
+    border-bottom: 1px dotted $clr--primary;
   }
   &--portofolio--imgs {
-    // height: fit-content;
     display: grid;
     grid-auto-columns: minmax(10rem, 20rem);
     grid-template-areas:
@@ -130,6 +142,12 @@
       &:hover {
         transform: scale(1.07);
       }
+    }
+    @include bp("max", 410px) {
+      grid-template-areas:
+        "img-1 img-2"
+        "img-3 img-4"
+        "img-5 img-6";
     }
   }
   &--portofolio--img--1 {

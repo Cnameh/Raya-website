@@ -7,6 +7,10 @@ import Footer from "../components/Footer";
 import Features from "../components/Features";
 import Templates from "../components/Templates";
 import Findout from "../components/Findout";
+import HomeServices from "../components/HomeServices";
+import HomeContact from "../components/HomeContact";
+import HomeInfo from "../components/HomeInfo";
+import HomeMotto from "../components/HomeMotto";
 
 const HomePage = () => {
   return (
@@ -24,6 +28,10 @@ const HomePage = () => {
         <Features />
         <Templates />
         <Findout />
+        <HomeServices />
+        <HomeContact />
+        <HomeInfo />
+        <HomeMotto />
       </main>
       <Footer />
       <Footer bottomFooter />

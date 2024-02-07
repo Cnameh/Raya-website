@@ -15,7 +15,7 @@ const Navbar = () => {
         } else {
           nav.current.classList.remove("navbar--stick");
         }
-      };
+      }
 
       window.addEventListener("scroll", handleScroll);
 
@@ -27,7 +27,9 @@ const Navbar = () => {
 
   return (
     <nav className="navbar" id="nav" ref={nav}>
-      <Link href="/"><img className="navbar--logo" src="/imgs/logo.png" alt="لوگوی وبسایت" /></Link>
+      <Link href="/">
+        <img className="navbar--logo" src="/imgs/logo.png" alt="لوگوی وبسایت" />
+      </Link>
       <ul className="navbar--links">
         {navLinks.map(({ name, path }) => (
           <li key={name}>

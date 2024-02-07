@@ -7,12 +7,11 @@ import { IoIosPlay } from "react-icons/io";
 const Findout = () => {
   return (
     <section className="findout">
-      <div className="spacer"></div>
-
       <div className="findout--container">
+      <div className="spacer"></div>
         <div className="findout--content">
           <div className="findout--video">
-            <img src="/imgs/bg-people.jpg" alt="" />
+            <img src="/imgs/bg-people.jpg" alt="عکس" />
             <IoIosPlay className="findout--play--icon" />
           </div>
           <div className="findout--context">
@@ -35,9 +34,7 @@ const Findout = () => {
             <button className="findout--btn">همین الان شروع کن</button>
           </div>
         </div>
-
         <div className="spacer"></div>
-
         <ul className="findout--statistics">
           <li className="findout--statistics--item statistics-item-1">
             <span className="findout--statistics--number">781</span>

@@ -1,10 +1,10 @@
 $breakpoints: (
   "xs": 0,
-  "sm": 50rem, // 500px
-  "md": 76.8rem, // 768px
-  "lg": 99.2rem, // 992px
-  "xl": 120rem, // 1200px
-  "xxl": 160rem, // 1600px
+  "sm": 500px,
+  "md": 768px,
+  "lg": 1024px,
+  "xl": 1200px,
+  "xxl": 1440px,
 );
 
 @mixin sm {
@@ -14,19 +14,19 @@ $breakpoints: (
 }
 
 @mixin md {
-  @media only screen and (min-width: map-get($breakpoints, "sm")) and (max-width: map-get($breakpoints, "md")) {
+  @media only screen and (min-width: 501px) and (max-width: map-get($breakpoints, "md")) {
     @content;
   }
 }
 
 @mixin lg {
-  @media only screen and (min-width: map-get($breakpoints, "md")) and (max-width: map-get($breakpoints, "lg")) {
+  @media only screen and (min-width: 769px) and (max-width: map-get($breakpoints, "lg")) {
     @content;
   }
 }
 
 @mixin xl {
-  @media only screen and (min-width: map-get($breakpoints, "lg")) and (max-width: map-get($breakpoints, "xl")) {
+  @media only screen and (min-width: 1025px) and (max-width: map-get($breakpoints, "xl")) {
     @content;
   }
 }
@@ -37,8 +37,18 @@ $breakpoints: (
   }
 }
 
-@mixin bp($bp: 0) {
-  @media only screen and (min-width: $bp) {
-    @content;
+@mixin bp($mqIdentifier: "min", $bpOne: 0, $bpTwo: 0) {
+  @if ($mqIdentifier == "min") {
+    @media only screen and (min-width: $bpOne) {
+      @content;
+    }
+  } @else if($mqIdentifier == "max") {
+    @media only screen and (max-width: $bpOne) {
+      @content;
+    }
+  } @else if($mqIdentifier == "range") {
+    @media only screen and (min-width: $bpOne) and (max-width: $bpTwo) {
+      @content;
+    }
   }
 }

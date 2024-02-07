@@ -16,6 +16,12 @@
   &--links {
     display: flex;
     gap: 2.5em;
+    @include lg {
+      display: none;
+    }
+    @include md {
+      display: none;
+    }
     @include sm {
       display: none;
     }
@@ -42,6 +48,14 @@
     &:hover {
       fill: rgba($color: $clr--light, $alpha: 0.5);
     }
+    @include lg {
+      $size--sm: 2.4rem;
+      width: $size--sm;
+    }
+    @include md {
+      $size--sm: 2.4rem;
+      width: $size--sm;
+    }
     @include sm {
       $size--sm: 2.4rem;
       width: $size--sm;
@@ -56,6 +70,16 @@
     cursor: pointer;
     &:hover {
       fill: rgba($color: $clr--light, $alpha: 0.5);
+    }
+    @include lg {
+      $size--sm: 2.4rem;
+      width: $size--sm;
+      display: block;
+    }
+    @include md {
+      $size--sm: 2.4rem;
+      width: $size--sm;
+      display: block;
     }
     @include sm {
       $size--sm: 2.4rem;

@@ -3,10 +3,16 @@
   text-align: center;
   &--small--title {
     font-size: $fs--md;
+    @include sm {
+      font-size: calc($fs--sm - 0.2rem);
+    }
   }
   &--big--title {
-    font-size: $fs--xxmd;
+    font-size: $fs--xmd;
     text-wrap: balance;
+    @include sm {
+      font-size: 2.2rem;
+    }
   }
   &--description {
     max-width: 80ch;
@@ -72,7 +78,7 @@
   }
   &--list--detail {
     color: $clr--text--gray;
-    transform: translateY(50%);
+    transform: translateY(100%);
     opacity: 0;
     transition: 0.3s;
     @include md {
@@ -88,6 +94,9 @@
     height: 100%;
     display: flex;
     gap: 3.2rem;
+    @include lg {
+      flex-direction: column;
+    }
     @include md {
       flex-direction: column;
     }
@@ -97,6 +106,9 @@
   }
   &--context--container {
     width: 40%;
+    @include lg {
+      width: 100%;
+    }
     @include md {
       width: 100%;
     }
@@ -107,11 +119,13 @@
   &--img--container {
     width: 60%;
     background-color: lightblue;
-    position: relative;
     > img {
       height: 100%;
       width: 100%;
       object-fit: cover;
+    }
+    @include lg {
+      width: 100%;
     }
     @include md {
       width: 100%;
@@ -123,11 +137,17 @@
   &--small--title {
     font-size: $fs--sm;
     color: $clr--text--dark;
+    @include sm {
+      font-size: calc($fs--sm - 0.2rem);
+    }
   }
   &--big--title {
     font-size: $fs--xmd;
     color: $clr--text--dark;
     text-wrap: balance;
+    @include sm {
+      font-size: 2.2rem;
+    }
   }
   &--description {
     color: $clr--text--dark;
@@ -191,6 +211,7 @@
   &--video {
     @include fullImage;
     width: 50%;
+    height: max-content;
     position: relative;
     @include md {
       width: 100%;
@@ -222,6 +243,10 @@
     background-color: $clr--secondary;
     border-radius: 50%;
     cursor: pointer;
+    transition: 0.3s;
+    &:hover {
+      font-size: 7.5rem;
+    }
   }
   &--context {
     width: 50%;
@@ -233,12 +258,19 @@
     }
   }
   &--small--title {
+    font-size: $fs--sm;
     color: $clr--text--gray;
+    @include sm {
+      font-size: calc($fs--sm - 0.2rem);
+    }
   }
   &--big--title {
     color: $clr--text--light;
     text-wrap: balance;
     font-size: $fs--xmd;
+    @include sm {
+      font-size: 2.2rem;
+    }
   }
   &--description {
     color: $clr--text--light;
@@ -248,7 +280,7 @@
     font-weight: bold;
     padding: 0.5em 2em;
     border: 2px solid $clr--secondary;
-    border-radius: 3.2rem;
+    border-radius: 1.8em;
     color: $clr--text--light;
     cursor: pointer;
     transition: 0.3s;
@@ -278,7 +310,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    // gap: 1.6rem;
     @include md {
       padding-bottom: 2rem;
     }
@@ -312,13 +343,426 @@
   }
   &--statistics--icon {
     color: rgba($color: $clr--text--gray, $alpha: 0.3);
-    font-size: $fs--xxmd;
+    font-size: $fs--xmd;
   }
   &--statistics--title {
-    font-size: $fs--md;
+    font-size: $fs--sm;
     color: $clr--text--light;
+    @include sm {
+      font-size: calc($fs--sm + 0.2rem);
+    }
   }
   &--statistics--detail {
+    font-size: calc($fs--sm - 0.2rem);
     color: rgba($color: $clr--text--gray, $alpha: 0.5);
+  }
+}
+
+.homeServices {
+  &--container {
+    @include row;
+  }
+  &--context {
+    text-align: center;
+  }
+  &--small--title {
+    color: $clr--text--dark;
+    @include sm {
+      font-size: calc($fs--sm - 0.2rem);
+    }
+  }
+  &--big--title {
+    color: $clr--text--dark;
+    font-size: $fs--xmd;
+    text-wrap: balance;
+    @include sm {
+      font-size: 2.2rem;
+    }
+  }
+  &--description {
+    color: $clr--text--dark;
+  }
+  &--list {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-areas: "service-1 service-2 service-3";
+    gap: 2rem;
+    @include md {
+      grid-template-areas: "service-1" "service-2" "service-3";
+    }
+    @include sm {
+      grid-template-areas: "service-1" "service-2" "service-3";
+    }
+  }
+  &--list--item {
+    text-align: center;
+    border: 2px solid rgba($color: $clr--gray, $alpha: 0.2);
+    border-radius: 1rem;
+    padding-inline: 2rem;
+    height: max-content;
+  }
+  &--list--icon {
+    color: $clr--secondary;
+    font-size: 5rem;
+    margin-bottom: 0.1em;
+  }
+  &--list--title {
+    font-size: calc($fs--sm + 0.2rem);
+    margin-bottom: 0.3em;
+    color: $clr--text--dark;
+  }
+  &--list--subtitle {
+    color: $clr--text--gray;
+    font-weight: normal;
+    font-size: calc($fs--sm - 0.2rem);
+  }
+  &--list--description {
+    color: $clr--text--gray;
+    margin-top: 1.5em;
+  }
+  &--list--item--dots {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    width: max-content;
+    margin-top: 5rem;
+    margin-inline: auto;
+    gap: 0.5rem;
+    &:hover > span {
+      background-color: $clr--tertiary;
+      transform: translateY(-0.5rem);
+    }
+    > span {
+      display: inline-block;
+      width: 0.8rem;
+      aspect-ratio: 1;
+      background-color: $clr--light;
+      border-radius: 50%;
+      transition: 0.3s;
+    }
+  }
+  &--list-item--1 {
+    grid-area: service-1;
+  }
+  &--list-item--2 {
+    grid-area: service-2;
+    background-color: $clr--bg--dark;
+    box-shadow: 2px 10px 50px -10px $clr--dark;
+    transition: 0.4s;
+    &:hover {
+      box-shadow: none;
+    }
+    > h4 {
+      color: $clr--text--light;
+    }
+  }
+  &--list-item--3 {
+    grid-area: service-3;
+  }
+  &--oneline {
+    color: $clr--text--gray;
+    text-align: center;
+  }
+  &--btn--container {
+    text-align: center;
+    margin-top: 2rem;
+  }
+  &--btn {
+    font-size: $fs--sm;
+    font-weight: bold;
+    padding: 0.5em 2em;
+    background-color: $clr--tertiary;
+    border: 2px solid $clr--tertiary;
+    border-radius: 1.8em;
+    color: $clr--text--light;
+    cursor: pointer;
+    transition: 0.3s;
+    &:hover {
+      background-color: darken($color: $clr--tertiary, $amount: 8%);
+      border-color: darken($color: $clr--tertiary, $amount: 8%);
+    }
+  }
+}
+
+.homeContact {
+  background-color: $clr--bg--gray;
+  &--container {
+    @include row;
+  }
+  &--context {
+    text-align: center;
+  }
+  &--small--title {
+    color: $clr--text--dark;
+    @include sm {
+      font-size: calc($fs--sm - 0.2rem);
+    }
+  }
+  &--big--title {
+    color: $clr--text--dark;
+    font-size: $fs--xmd;
+    text-wrap: balance;
+    @include sm {
+      font-size: 2.2rem;
+    }
+  }
+  &--description {
+    color: $clr--text--dark;
+  }
+  &--list {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    @include md {
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 5rem;
+    }
+    @include sm {
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 5rem;
+    }
+  }
+  &--list--item {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+  }
+  &--list--item--icon {
+    color: $clr--tertiary;
+    font-size: 5rem;
+  }
+  &--list--item--title {
+    color: $clr--text--dark;
+    font-size: calc($fs--sm + 0.2rem);
+    @include sm {
+      font-size: calc($fs--sm + 0.2rem);
+    }
+  }
+  &--list--item--subtitle {
+    color: $clr--text--gray;
+    font-weight: normal;
+    font-size: calc($fs--sm - 0.2rem);
+    @include sm {
+      font-size: calc($fs--sm - 0.2rem);
+    }
+  }
+  &--or {
+    height: 1px;
+    background-color: rgba($color: $clr--gray, $alpha: 0.4);
+  }
+  &--form--title {
+    color: $clr--text--dark;
+    font-size: $fs--xmd;
+    text-align: center;
+    text-wrap: balance;
+    @include sm {
+      font-size: 2.2rem;
+    }
+  }
+  &--form--inputs {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-areas:
+      "name email"
+      "message message";
+    gap: 2rem;
+    @include sm {
+      grid-template-areas:
+        "name"
+        "email"
+        "message";
+    }
+  }
+  &--form--input--group {
+    display: flex;
+    flex-direction: column;
+    > label {
+      color: $clr--text--dark;
+      font-size: calc($fs--sm - 0.2rem);
+      margin-bottom: 1rem;
+      padding-right: 1em;
+      position: relative;
+      display: inline-block;
+      max-width: max-content;
+      &::after {
+        content: attr(badge);
+        position: absolute;
+        top: -0.3em;
+        left: -0.7em;
+      }
+      @include sm {
+        font-size: 1rem;
+      }
+    }
+    > input {
+      padding: 1rem 1.3rem;
+      border: 1px solid rgba($color: $clr--gray, $alpha: 0.4);
+      border-radius: 0.5rem;
+      width: 100%;
+    }
+    > textarea {
+      padding: 1rem 1.3rem;
+      border: 1px solid rgba($color: $clr--gray, $alpha: 0.4);
+      border-radius: 0.5rem;
+      width: 100%;
+      min-height: 5rem;
+      height: 25rem;
+      resize: vertical;
+    }
+  }
+  &--form--input--name {
+    grid-area: name;
+  }
+  &--form--input--email {
+    grid-area: email;
+  }
+  &--form--input--message {
+    grid-area: message;
+  }
+  &--form--btn--container {
+    text-align: center;
+    margin-top: 2.5rem;
+  }
+  &--form--btn {
+    font-size: $fs--sm;
+    font-weight: bold;
+    padding: 0.5em 2em;
+    background-color: $clr--tertiary;
+    border: 2px solid $clr--tertiary;
+    border-radius: 1.8em;
+    color: $clr--text--light;
+    cursor: pointer;
+    transition: 0.3s;
+    &:hover {
+      background-color: darken($color: $clr--tertiary, $amount: 8%);
+      border-color: darken($color: $clr--tertiary, $amount: 8%);
+    }
+  }
+}
+
+.homeInfo {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  @include lg {
+    grid-template-columns: 1fr;
+  }
+  @include md {
+    grid-template-columns: 1fr;
+  }
+  @include sm {
+    grid-template-columns: 1fr;
+  }
+  &--item {
+    position: relative;
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    transition: 0.3s;
+    &:hover .homeInfo--item--img {
+      filter: brightness(60%);
+      transform: scale(1.1);
+    }
+  }
+  &--item--img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.3s ease;
+    transform-origin: 50% 50%;
+  }
+  &--item--context {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-right: 5rem;
+    transition: 0.3s;
+  }
+  &--item--title {
+    color: $clr--text--light;
+    font-size: $fs--md;
+    margin-bottom: 1.6rem;
+    max-width: 20ch;
+    text-wrap: balance;
+    @include bp("range", 1025px, 1300px) {
+      font-size: 2rem;
+    }
+    @include sm {
+      font-size: 2rem;
+    }
+  }
+  &--item--subtitle {
+    color: $clr--text--light;
+    margin-bottom: 1.6em;
+    font-weight: normal;
+    font-size: calc($fs--sm - 0.2rem);
+  }
+  &--item--btn {
+    color: $clr--text--light;
+    font-weight: bold;
+    background-color: $clr--tertiary;
+    border-radius: 0.3em;
+    padding: 0.3em 0.6em;
+    cursor: pointer;
+  }
+}
+
+.motto {
+  background-color: $clr--bg--light;
+  &--container {
+    @include row;
+  }
+  &--context {
+    display: flex;
+    justify-content: space-between;
+    @include lg {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 3rem;
+    }
+    @include md {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 3rem;
+    }
+    @include sm {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 3rem;
+    }
+  }
+  &--text {
+    font-size: $fs--xmd;
+    color: $clr--text--dark;
+    text-wrap: balance;
+    @include sm {
+      font-size: 2.2rem;
+    }
+  }
+  &--btn {
+    font-size: $fs--sm;
+    font-weight: bold;
+    padding: 0.5em 2em;
+    background-color: $clr--secondary;
+    border: 2px solid $clr--secondary;
+    border-radius: 1.8em;
+    color: $clr--text--light;
+    cursor: pointer;
+    transition: 0.3s;
+    &:hover {
+      background-color: darken($color: $clr--secondary, $amount: 8%);
+      border-color: darken($color: $clr--secondary, $amount: 8%);
+    }
   }
 }
