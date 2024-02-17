@@ -101,6 +101,9 @@
       margin-bottom: 2rem;
     }
   }
+  &--news--context {
+    flex-grow: 1;
+  }
   &--news--title {
     color: $clr--text--light;
     font-weight: bold;
@@ -178,4 +181,8 @@
   background-color: #323232;
   color: $clr--text--gray;
   padding: 3rem 4.6rem;
+  @include sm {
+    text-align: center;
+    text-wrap: balance;
+  }
 }

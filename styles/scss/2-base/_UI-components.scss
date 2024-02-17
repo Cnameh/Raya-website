@@ -1,0 +1,31 @@
+.scrollToTop--btn {
+  @include flexCenter;
+  width: 4.5rem;
+  aspect-ratio: 1;
+  font-size: 2rem;
+  border-radius: 0.1em;
+  color: $clr--dark;
+  background-color: darken($color: $clr--bg--gray, $amount: 6%);
+  position: fixed;
+  right: 30px;
+  bottom: 20px;
+  z-index: 5;
+  cursor: pointer;
+  transition: 0.3s ease;
+  &:is(:hover, :focus) {
+    color: $clr--light;
+    background-color: $clr--dark;
+  }
+  @include bp("min", 2000px) {
+    width: 5rem;
+    font-size: 2.5rem;
+  }
+  @include md {
+    right: 20px;
+    bottom: 30px;
+  }
+  @include sm {
+    right: 20px;
+    bottom: 30px;
+  }
+}

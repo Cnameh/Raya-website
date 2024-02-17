@@ -40,7 +40,7 @@
     display: block;
     color: $clr--text--light;
     font-size: $fs--md;
-    margin-bottom: 2.4rem;
+    margin-bottom: 2rem;
     @include md {
       font-size: calc($fs--md - 0.4rem);
     }

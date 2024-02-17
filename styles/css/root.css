@@ -3,16 +3,12 @@
   src: url("/fonts/Vazir.ttf");
   font-weight: normal;
 }
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  border: none;
-  outline: none;
-}
-
-*:focus-visible {
-  border: 2px solid #c39f76;
 }
 
 html {
@@ -27,11 +23,16 @@ body {
   scroll-behavior: smooth;
 }
 
-ul, ol, dl {
+ul,
+ol,
+dl {
   list-style: none;
 }
 
-img, picture, video, canvas {
+img,
+picture,
+video,
+canvas {
   display: block;
   max-width: 100%;
 }
@@ -45,9 +46,17 @@ label {
   display: block;
 }
 
-button, input, textarea, select {
+button,
+input,
+textarea,
+select {
+  border: none;
   background: none;
   font: inherit;
+}
+
+p {
+  line-height: 1.7em;
 }
 
 textarea {
@@ -59,12 +68,12 @@ table {
 }
 
 ::-moz-selection {
-  background-color: #1B1B1B;
+  background-color: #1b1b1b;
   color: #fff;
 }
 
 ::selection {
-  background-color: #1B1B1B;
+  background-color: #1b1b1b;
   color: #fff;
 }
 
@@ -74,6 +83,48 @@ table {
 
 .spacer--module {
   height: 5rem;
+}
+
+.scrollToTop--btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  width: 4.5rem;
+  aspect-ratio: 1;
+  font-size: 2rem;
+  border-radius: 0.1em;
+  color: #28262b;
+  background-color: #dedede;
+  position: fixed;
+  right: 30px;
+  bottom: 20px;
+  z-index: 5;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.scrollToTop--btn:is(:hover, :focus) {
+  color: #fff;
+  background-color: #28262b;
+}
+@media only screen and (min-width: 2000px) {
+  .scrollToTop--btn {
+    width: 5rem;
+    font-size: 2.5rem;
+  }
+}
+@media only screen and (min-width: 501px) and (max-width: 768px) {
+  .scrollToTop--btn {
+    right: 20px;
+    bottom: 30px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .scrollToTop--btn {
+    right: 20px;
+    bottom: 30px;
+  }
 }
 
 .navbar {
@@ -120,7 +171,7 @@ table {
 .navbar--link {
   color: #fff;
   font-size: 1.6rem;
-  font-weight: bold;
+  font-weight: 500;
   padding-block: 0.5em;
 }
 .navbar--link--active {
@@ -225,7 +276,7 @@ table {
   display: block;
   color: #fff;
   font-size: 2.4rem;
-  margin-bottom: 2.4rem;
+  margin-bottom: 2rem;
 }
 @media only screen and (min-width: 501px) and (max-width: 768px) {
   .header--slider--title {
@@ -430,6 +481,9 @@ table {
 .footer--news--list--item:not(:last-child) {
   margin-bottom: 2rem;
 }
+.footer--news--context {
+  flex-grow: 1;
+}
 .footer--news--title {
   color: #fff;
   font-weight: bold;
@@ -508,6 +562,12 @@ table {
   background-color: #323232;
   color: #9c9c9c;
   padding: 3rem 4.6rem;
+}
+@media only screen and (max-width: 500px) {
+  .bottom--footer {
+    text-align: center;
+    text-wrap: balance;
+  }
 }
 
 .features {
@@ -1212,13 +1272,13 @@ table {
 }
 .homeContact--form--input--group > input {
   padding: 1rem 1.3rem;
-  border: 1px solid rgba(156, 156, 156, 0.4);
+  outline: 1px solid rgba(156, 156, 156, 0.4);
   border-radius: 0.5rem;
   width: 100%;
 }
 .homeContact--form--input--group > textarea {
   padding: 1rem 1.3rem;
-  border: 1px solid rgba(156, 156, 156, 0.4);
+  outline: 1px solid rgba(156, 156, 156, 0.4);
   border-radius: 0.5rem;
   width: 100%;
   min-height: 5rem;

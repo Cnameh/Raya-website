@@ -598,13 +598,13 @@
     }
     > input {
       padding: 1rem 1.3rem;
-      border: 1px solid rgba($color: $clr--gray, $alpha: 0.4);
+      outline: 1px solid rgba($color: $clr--gray, $alpha: 0.4);
       border-radius: 0.5rem;
       width: 100%;
     }
     > textarea {
       padding: 1rem 1.3rem;
-      border: 1px solid rgba($color: $clr--gray, $alpha: 0.4);
+      outline: 1px solid rgba($color: $clr--gray, $alpha: 0.4);
       border-radius: 0.5rem;
       width: 100%;
       min-height: 5rem;
