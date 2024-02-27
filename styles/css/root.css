@@ -51,6 +51,7 @@ input,
 textarea,
 select {
   border: none;
+  outline: none;
   background: none;
   font: inherit;
 }
@@ -326,7 +327,7 @@ table {
   background-color: #e1003a;
 }
 .shareSocialMedia--socialLink:nth-child(4) {
-  background-color: hsl(0, 0%, 7%);
+  background-color: #121212;
 }
 .shareSocialMedia--socialLink:hover {
   box-shadow: 0px 1px 5px -1px rgba(40, 38, 43, 0.8);
@@ -483,7 +484,7 @@ table {
   transition: 0.25s;
 }
 .searchBlock--socialMedia--list--link:nth-child(1) {
-  background-color: hsl(0, 0%, 7%);
+  background-color: #121212;
 }
 .searchBlock--socialMedia--list--link:nth-child(2) {
   background-color: #cd201f;
@@ -573,11 +574,11 @@ table {
   color: #fff;
 }
 .stickySocialMedia--link--twitter {
-  color: hsl(0, 0%, 7%);
+  color: #121212;
   transition: 0.3s;
 }
 .stickySocialMedia--link--twitter:hover {
-  background: hsl(0, 0%, 7%);
+  background: #121212;
   color: #fff;
 }
 .stickySocialMedia--link--linkedIn {
@@ -3462,8 +3463,8 @@ table {
   color: #3499cc;
 }
 .aboutUs--twitter:hover {
-  text-shadow: 1px 1px 7px hsl(0, 0%, 7%);
-  color: hsl(0, 0%, 7%);
+  text-shadow: 1px 1px 7px #121212;
+  color: #121212;
 }
 .aboutUs--pinterest:hover {
   text-shadow: 1px 1px 7px #e1003a;
@@ -3620,4 +3621,249 @@ table {
   width: 0;
   height: 100%;
   background-color: #c39f76;
+}
+
+.contactUs {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.contactUs--container {
+  width: 94%;
+  max-width: 120rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5rem;
+}
+@media only screen and (min-width: 501px) and (max-width: 768px) {
+  .contactUs--container {
+    grid-template-columns: 1fr;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .contactUs--container {
+    grid-template-columns: 1fr;
+  }
+}
+.contactUs--title {
+  color: #28262b;
+  font-size: 4rem;
+  text-wrap: wrap;
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .contactUs--title {
+    font-size: 3.2rem;
+  }
+}
+@media only screen and (min-width: 501px) and (max-width: 768px) {
+  .contactUs--title {
+    font-size: 3.2rem;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .contactUs--title {
+    font-size: 3.2rem;
+  }
+}
+.contactUs--list--item {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+.contactUs--list--icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  font-size: 1.8rem;
+  background-color: #ededed;
+  color: #28262b;
+  width: 4.5rem;
+  aspect-ratio: 1;
+  border-radius: 0.3rem;
+}
+.contactUs--list--item--title {
+  color: #28262b;
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+.contactUs--list--item--detail {
+  color: #28262b;
+  font-size: 1.4rem;
+}
+.contactUs--form--inputs {
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-areas: "name email" "subject subject" "message message";
+  gap: 2rem;
+}
+@media only screen and (max-width: 410px) {
+  .contactUs--form--inputs {
+    grid-template-areas: "name" "email" "subject" "message";
+  }
+}
+.contactUs--form--input--group {
+  display: flex;
+  flex-direction: column;
+}
+.contactUs--form--input--group > label {
+  color: #28262b;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+  max-width: max-content;
+}
+.contactUs--form--input--group > label::after {
+  content: attr(badge);
+  position: absolute;
+  top: -0.3em;
+  left: -0.7em;
+}
+@media only screen and (max-width: 500px) {
+  .contactUs--form--input--group > label {
+    font-size: 1rem;
+  }
+}
+.contactUs--form--input--group > input {
+  font-size: 1.4rem;
+  color: #28262b;
+  padding: 1em;
+  background-color: #ededed;
+  border-radius: 0.1em;
+  outline: 1px solid rgba(156, 156, 156, 0.5);
+  width: 100%;
+}
+.contactUs--form--input--group > textarea {
+  font-size: 1.4rem;
+  color: #28262b;
+  padding: 1em;
+  background-color: #ededed;
+  border-radius: 0.1em;
+  outline: 1px solid rgba(156, 156, 156, 0.5);
+  width: 100%;
+  min-height: 5rem;
+  height: 20rem;
+  resize: vertical;
+}
+.contactUs--form--input--name {
+  grid-area: name;
+}
+.contactUs--form--input--email {
+  grid-area: email;
+}
+.contactUs--form--input--subject {
+  grid-area: subject;
+}
+.contactUs--form--input--message {
+  grid-area: message;
+}
+.contactUs--form--btn--container {
+  text-align: right;
+  margin-top: 2rem;
+}
+.contactUs--form--btn {
+  font-size: 1.6rem;
+  font-weight: bold;
+  padding: 0.5em 2em;
+  background-color: #c39f76;
+  border-radius: 0.2rem;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.contactUs--form--btn:hover {
+  background-color: #b78b5a;
+}
+
+.location {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+@media only screen and (min-width: 501px) and (max-width: 768px) {
+  .location {
+    grid-template-columns: 1fr;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .location {
+    grid-template-columns: 1fr;
+  }
+}
+@media only screen and (min-width: 501px) and (max-width: 768px) {
+  .location--map {
+    min-height: 50rem;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .location--map {
+    min-height: 50rem;
+  }
+}
+.location--context {
+  padding-inline: 2.5rem;
+  border: 2rem solid #c39f76;
+}
+.location--title {
+  color: #28262b;
+  font-size: 4rem;
+  text-wrap: balance;
+  margin-bottom: 2.5rem;
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .location--title {
+    font-size: 3.2rem;
+  }
+}
+@media only screen and (min-width: 501px) and (max-width: 768px) {
+  .location--title {
+    font-size: 3.2rem;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .location--title {
+    font-size: 3.2rem;
+  }
+}
+.location--description {
+  color: #28262b;
+  font-size: 1.4rem;
+  margin-bottom: 2.5rem;
+}
+.location--socialMedia {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 1.6rem;
+  margin-right: 1.5rem;
+}
+.location--socialMedia--item {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  width: 3.5rem;
+  scale: 1.4;
+  aspect-ratio: 1;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.location--socialMedia--item:hover {
+  scale: 1.2;
+  color: #fff;
+}
+.location--socialMedia--item--1:hover {
+  background: #f06eaa;
+}
+.location--socialMedia--item--2:hover {
+  background: #ee2a7b;
+}
+.location--socialMedia--item--3:hover {
+  background: #121212;
+}
+.location--socialMedia--item--4:hover {
+  background: #229ed9;
 }

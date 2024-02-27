@@ -1,0 +1,221 @@
+.contactUs {
+  @include fullImage;
+  &--container {
+    @include row;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+    @include md {
+      grid-template-columns: 1fr;
+    }
+    @include sm {
+      grid-template-columns: 1fr;
+    }
+  }
+  &--title {
+    color: $clr--text--dark;
+    font-size: $fs--xxmd;
+    text-wrap: wrap;
+    @include lg {
+      font-size: $fs--xmd;
+    }
+    @include md {
+      font-size: $fs--xmd;
+    }
+    @include sm {
+      font-size: $fs--xmd;
+    }
+  }
+  &--list--item {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+  &--list--icon {
+    @include flexCenter;
+    font-size: calc($fs--sm + 0.2rem);
+    background-color: $clr--bg--gray;
+    color: $clr--dark;
+    width: 4.5rem;
+    aspect-ratio: 1;
+    border-radius: 0.3rem;
+  }
+  &--list--item--title {
+    color: $clr--text--dark;
+    font-size: calc($fs--sm - 0.2rem);
+    margin-bottom: 0.5rem;
+  }
+  &--list--item--detail {
+    color: $clr--text--dark;
+    font-size: calc($fs--sm - 0.2rem);
+  }
+  &--form--inputs {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-areas:
+      "name email"
+      "subject subject"
+      "message message";
+    gap: 2rem;
+    @include bp("max", 410px) {
+      grid-template-areas:
+        "name"
+        "email"
+        "subject"
+        "message";
+    }
+  }
+  &--form--input--group {
+    display: flex;
+    flex-direction: column;
+    > label {
+      color: $clr--text--dark;
+      font-size: calc($fs--sm - 0.2rem);
+      margin-bottom: 1rem;
+      position: relative;
+      display: inline-block;
+      max-width: max-content;
+      &::after {
+        content: attr(badge);
+        position: absolute;
+        top: -0.3em;
+        left: -0.7em;
+      }
+      @include sm {
+        font-size: 1rem;
+      }
+    }
+    > input {
+      font-size: calc($fs--sm - 0.2rem);
+      color: $clr--text--dark;
+      padding: 1em;
+      background-color: $clr--bg--gray;
+      border-radius: 0.1em;
+      outline: 1px solid rgba($clr--gray, 0.5);
+      width: 100%;
+    }
+    > textarea {
+      font-size: calc($fs--sm - 0.2rem);
+      color: $clr--text--dark;
+      padding: 1em;
+      background-color: $clr--bg--gray;
+      border-radius: 0.1em;
+      outline: 1px solid rgba($clr--gray, 0.5);
+      width: 100%;
+      min-height: 5rem;
+      height: 20rem;
+      resize: vertical;
+    }
+  }
+  &--form--input--name {
+    grid-area: name;
+  }
+  &--form--input--email {
+    grid-area: email;
+  }
+  &--form--input--subject {
+    grid-area: subject;
+  }
+  &--form--input--message {
+    grid-area: message;
+  }
+  &--form--btn--container {
+    text-align: right;
+    margin-top: 2rem;
+  }
+  &--form--btn {
+    font-size: $fs--sm;
+    font-weight: bold;
+    padding: 0.5em 2em;
+    background-color: $clr--primary;
+    border-radius: 0.2rem;
+    color: $clr--text--light;
+    cursor: pointer;
+    transition: 0.3s;
+    &:hover {
+      background-color: darken($clr--primary, $amount: 8%);
+    }
+  }
+}
+
+.location {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  @include md {
+    grid-template-columns: 1fr;
+  }
+  @include sm {
+    grid-template-columns: 1fr;
+  }
+  &--map {
+    @include md {
+      min-height: 50rem;
+    }
+    @include sm {
+      min-height: 50rem;
+    }
+  }
+  &--context {
+    padding-inline: 2.5rem;
+    border: 2rem solid $clr--primary;
+  }
+  &--title {
+    color: $clr--text--dark;
+    font-size: $fs--xxmd;
+    text-wrap: balance;
+    margin-bottom: 2.5rem;
+    @include lg {
+      font-size: $fs--xmd;
+    }
+    @include md {
+      font-size: $fs--xmd;
+    }
+    @include sm {
+      font-size: $fs--xmd;
+    }
+  }
+  &--description {
+    color: $clr--text--dark;
+    font-size: calc($fs--sm - 0.2rem);
+    margin-bottom: 2.5rem;
+  }
+  &--socialMedia {
+    display: flex;
+    gap: 1.5rem;
+    font-size: $fs--sm;
+    margin-right: 1.5rem;
+  }
+  &--socialMedia--item {
+    @include flexCenter;
+    width: 3.5rem;
+    scale: 1.4;
+    aspect-ratio: 1;
+    cursor: pointer;
+    transition: 0.3s ease;
+    &:hover {
+      scale: 1.2;
+      color: $clr--light;
+    }
+  }
+  &--socialMedia--item--1 {
+    &:hover {
+      background: $clr--dribbble;
+    }
+  }
+  &--socialMedia--item--2 {
+    &:hover {
+      background: $clr--instagram;
+    }
+  }
+  &--socialMedia--item--3 {
+    &:hover {
+      background: $clr--twitter;
+    }
+  }
+  &--socialMedia--item--4 {
+    &:hover {
+      background: $clr--telegram;
+    }
+  }
+}
