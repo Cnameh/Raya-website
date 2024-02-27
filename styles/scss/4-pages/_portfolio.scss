@@ -1,0 +1,163 @@
+.portfolio--main {
+  @include row(160rem);
+}
+
+.filterList {
+  display: flex;
+  margin: 3rem auto;
+  width: max-content;
+  gap: 2rem;
+  @include md {
+    display: none;
+  }
+  @include sm {
+    display: none;
+  }
+  &--item {
+    color: $clr--text--dark;
+  }
+  &--item--btn {
+    font-size: calc($fs--sm - 0.2rem);
+    border-radius: 2em;
+    padding: 0.5em 1.2em;
+    cursor: pointer;
+    transition: 0.3s;
+    &:hover {
+      color: $clr--primary;
+    }
+  }
+  &--item--btn--active {
+    outline: 1px solid $clr--primary;
+  }
+}
+
+.portfolio--list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+  gap: 3rem;
+  margin-block: 3rem;
+  @include bp("max", 350px) {
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  }
+  &--item {
+    color: $clr--text--dark;
+    opacity: 0;
+  }
+  &--item--img--container {
+    width: 100%;
+    position: relative;
+    isolation: isolate;
+    &:hover .portfolio--list--item--img--context--container {
+      opacity: 1;
+    }
+    &:hover .portfolio--list--item--img--context {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  &--item--img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+  }
+  &--item--img--context--container {
+    @include flexCenter;
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    background: linear-gradient(to left, rgba(158, 161, 212, 0.7), rgba($clr--primary, 0.7));
+    transition: 0.4s;
+    color: $clr--light;
+  }
+  &--item--img--context {
+    text-align: center;
+    transform: translateX(3rem);
+    opacity: 0.6;
+    transition: 0.6s ease;
+  }
+  &--item--img--context--title {
+    font-weight: bold;
+    font-size: $fs--xmd;
+    text-wrap: balance;
+  }
+  &--item--img--context--subtitle {
+    font-size: calc($fs--sm - 0.2rem);
+    text-wrap: balance;
+    font-weight: normal;
+  }
+  &--item--btn {
+    font-size: calc($fs--sm - 0.2rem);
+    background-color: $clr--primary;
+    color: $clr--text--light;
+    padding: 0.3em 0.6em;
+    cursor: pointer;
+    margin-top: 1.2rem;
+    margin-bottom: 2.4rem;
+    transition: 0.3s;
+    &:hover {
+      color: $clr--text--dark;
+    }
+  }
+  &--item--title {
+    font-size: calc($fs--sm + 0.4rem);
+    font-weight: bold;
+    display: block;
+    width: max-content;
+    margin-bottom: 0.5rem;
+    @include bp("max", 350px) {
+      font-size: $fs--sm;
+    }
+  }
+  &--item--subtitle {
+    font-size: calc($fs--sm - 0.3rem);
+    color: $clr--text--gray;
+    font-weight: normal;
+    margin-bottom: 2.4rem;
+  }
+  &--item--description {
+    font-size: calc($fs--sm - 0.2rem);
+    margin-bottom: 2.4rem;
+    color: $clr--text--gray;
+  }
+}
+
+.portfolio--pagination {
+  width: max-content;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin: 5rem auto;
+  font-size: calc($fs--sm - 0.2rem);
+  color: $clr--text--dark;
+  &--number {
+    @include flexCenter;
+    width: 4.5rem;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    border: 1px solid rgba($clr--gray, 0.4);
+    transition: 0.3s;
+    &:hover {
+      color: $clr--primary;
+      border: none;
+      box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    }
+    > a {
+      padding: 1rem;
+    }
+  }
+  &--text {
+    display: flex;
+    align-items: center;
+    > a {
+      text-decoration: underline dotted $clr--primary;
+      text-underline-offset: 0.6em;
+      padding-left: 1em;
+      &:hover {
+        text-decoration-style: solid;
+      }
+    }
+    > svg {
+      font-size: 2rem;
+    }
+  }
+}

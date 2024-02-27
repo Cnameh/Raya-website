@@ -22,7 +22,7 @@ const FilterBar = ({ centered }) => {
           <HiBars3 />
         </button>
       </div>
-      <Link className="filterBar--dots--btn" href="#" title="نمونه کارها">
+      <Link className="filterBar--dots--btn" href="#">
         <PiDotsNineBold />
       </Link>
     </div>

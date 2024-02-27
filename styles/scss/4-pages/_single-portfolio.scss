@@ -1,0 +1,374 @@
+.singlePortfolio {
+  &--main {
+    @include row;
+  }
+
+  &--content {
+    display: grid;
+    grid-template-columns: 1fr 0;
+    @include bp("max", 900px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &--item--context {
+    color: $clr--text--dark;
+  }
+  &--item--name {
+    font-size: calc($fs--sm - 0.4rem);
+    background-color: $clr--primary;
+    padding: 0.3em 1.5em;
+    margin-bottom: 1.5rem;
+    color: $clr--text--light;
+    cursor: pointer;
+    transition: 0.3s;
+    &:hover {
+      color: $clr--text--dark;
+    }
+  }
+  &--item--title {
+    font-size: calc($fs--sm + 0.4rem);
+    font-weight: bold;
+    width: max-content;
+    display: block;
+    @include bp("max", 350px) {
+      font-size: $fs--sm;
+    }
+  }
+  &--item--info {
+    display: flex;
+    gap: 0.5rem;
+    font-size: calc($fs--sm - 0.2rem);
+    margin-block: 1rem 4rem;
+    > span {
+      color: $clr--text--gray;
+    }
+    > a {
+      text-decoration: underline dotted $clr--primary;
+      text-underline-offset: 0.5em;
+      &:hover {
+        text-decoration-style: solid;
+      }
+    }
+  }
+
+  &--portofolios--panel {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-areas:
+      "img-1 img-1 img-2"
+      "img-1 img-1 img-3"
+      "img-4 img-5 img-6";
+    gap: 1rem;
+    @include md {
+      grid-template-areas:
+        "img-1 img-1"
+        "img-1 img-1"
+        "img-2 img-3"
+        "img-4 img-5"
+        "img-6 .";
+    }
+    @include sm {
+      grid-template-areas:
+        "img-1 img-1"
+        "img-1 img-1"
+        "img-2 img-3"
+        "img-4 img-5"
+        "img-6 .";
+    }
+  }
+  &--portofolios--panel--item {
+    padding: 0.6rem;
+    background-color: $clr--bg--gray;
+    outline: 1px solid transparent;
+    transition: 0.5s;
+    &:hover {
+      outline-color: $clr--gray;
+    }
+
+    &:nth-child(1) {
+      grid-area: img-1;
+    }
+    &:nth-child(2) {
+      grid-area: img-2;
+    }
+    &:nth-child(3) {
+      grid-area: img-3;
+    }
+    &:nth-child(4) {
+      grid-area: img-4;
+    }
+    &:nth-child(5) {
+      grid-area: img-5;
+    }
+    &:nth-child(6) {
+      grid-area: img-6;
+    }
+  }
+  &--portofolios--panel--img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+  }
+
+  &--tasks {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin-bottom: 1.5rem;
+    font-size: calc($fs--sm - 0.2rem);
+    @include md {
+      grid-template-columns: 1fr;
+    }
+    @include sm {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &--tasks--one {
+    padding-bottom: 1.5rem;
+    border-bottom: 1px dotted rgba($clr--gray, 0.4);
+    @include md {
+      border: none;
+    }
+    @include sm {
+      border: none;
+    }
+  }
+
+  &--tasks--two {
+    padding-bottom: 1.5rem;
+    border-bottom: 1px dotted rgba($clr--gray, 0.5);
+    padding-right: 1.5rem;
+    border-right: 1px dotted rgba($clr--gray, 0.4);
+    @include md {
+      border-right: none;
+      padding-right: 0;
+    }
+    @include sm {
+      border-right: none;
+      padding-right: 0;
+    }
+  }
+
+  &--tasks--link {
+    margin-right: 0.5em;
+    text-decoration: 1px underline dotted $clr--primary;
+    text-underline-offset: 0.5em;
+
+    &:hover {
+      text-decoration-style: solid;
+    }
+  }
+
+  &--description--title {
+    margin-bottom: 3rem;
+    font-size: calc($fs--sm - 0.1rem);
+  }
+
+  &--description {
+    font-size: calc($fs--sm - 0.2rem);
+  }
+
+  &--quote--title {
+    margin-bottom: 3rem;
+    font-size: calc($fs--sm - 0.1rem);
+  }
+
+  &--quote--icon {
+    color: rgba($clr--gray, 0.5);
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    font-size: $fs--xxmd;
+    z-index: -1;
+  }
+
+  &--quote {
+    font-size: calc($fs--sm - 0.2rem);
+    border-right: 2px solid $clr--primary;
+    padding-right: 2rem;
+    position: relative;
+    isolation: isolate;
+    text-decoration: underline 1px rgba($clr--dark, 0.5);
+    text-underline-offset: 0.5em;
+    line-height: 2.3em;
+  }
+
+  &--comments {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 2rem;
+    border-bottom: 1px dotted rgba($clr--gray, 0.4);
+    @include sm {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 3rem;
+    }
+  }
+  &--comments--title {
+    font-size: calc($fs--sm - 0.2rem);
+    color: $clr--text--dark;
+    position: relative;
+    padding-right: 2.2em;
+    &::before {
+      content: attr(badge);
+      @include size(2rem);
+      @include gridCenter;
+      position: absolute;
+      background-color: $clr--primary;
+      color: $clr--text--light;
+      right: 0;
+    }
+  }
+  &--comments--tags {
+    font-size: calc($fs--sm - 0.2rem);
+    color: $clr--text--dark;
+    display: flex;
+    gap: 0.5em;
+    @include sm {
+      flex-wrap: wrap;
+    }
+    @include bp("max", 300px) {
+      flex-direction: column;
+    }
+  }
+  &--comments--tag {
+    border: 1px solid rgba($clr--gray, 0.4);
+    border-radius: 0.2em;
+    padding: 0.3em 1.5em;
+    transition: 0.4s;
+    &:hover {
+      border-color: transparent;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 3px 15px;
+    }
+  }
+  &--like--share {
+    display: flex;
+    justify-content: space-between;
+    padding-block: 2rem;
+  }
+  &--like--btn {
+    @include flexCenter(row, 0.5rem);
+    padding-inline: 0.7em;
+    color: rgba($clr--text--dark, 0.5);
+    font-size: $fs--sm;
+    background-color: $clr--bg--gray;
+    border-radius: 5em;
+    cursor: pointer;
+  }
+  &--like--count {
+    font-size: calc($fs--sm - 0.2rem);
+  }
+
+  &--respond--title {
+    border-bottom: 1px dotted rgba($clr--gray, 0.4);
+    color: $clr--text--dark;
+    font-size: calc($fs--sm + 0.2rem);
+    padding-bottom: 1em;
+    margin-bottom: 2rem;
+  }
+  &--respond--inputs--container {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-areas:
+      "name email website"
+      "comment comment comment";
+    gap: 2rem;
+    @include sm {
+      grid-template-areas:
+        "name"
+        "email"
+        "website"
+        "comment";
+    }
+  }
+  &--respond--name {
+    grid-area: name;
+    > label {
+      color: $clr--text--dark;
+      font-size: calc($fs--sm - 0.2rem);
+      margin-bottom: 1.5rem;
+    }
+    > input {
+      font-size: calc($fs--sm - 0.2rem);
+      color: $clr--text--dark;
+      padding: 1em;
+      background-color: $clr--bg--gray;
+      border-radius: 0.1em;
+      outline: 1px solid rgba($clr--gray, 0.5);
+      width: 100%;
+    }
+  }
+  &--respond--email {
+    grid-area: email;
+    > label {
+      color: $clr--text--dark;
+      font-size: calc($fs--sm - 0.2rem);
+      margin-bottom: 1.5rem;
+    }
+    > input {
+      font-size: calc($fs--sm - 0.2rem);
+      color: $clr--text--dark;
+      padding: 1em;
+      background-color: $clr--bg--gray;
+      border-radius: 0.1em;
+      outline: 1px solid rgba($clr--gray, 0.5);
+      width: 100%;
+    }
+  }
+  &--respond--website {
+    grid-area: website;
+    > label {
+      color: $clr--text--dark;
+      font-size: calc($fs--sm - 0.2rem);
+      margin-bottom: 1.5rem;
+    }
+    > input {
+      font-size: calc($fs--sm - 0.2rem);
+      color: $clr--text--dark;
+      padding: 1em;
+      background-color: $clr--bg--gray;
+      border-radius: 0.1em;
+      outline: 1px solid rgba($clr--gray, 0.5);
+      width: 100%;
+    }
+  }
+  &--respond--comment {
+    grid-area: comment;
+    > label {
+      color: $clr--text--dark;
+      font-size: calc($fs--sm - 0.2rem);
+      margin-bottom: 1.5rem;
+    }
+    > textarea {
+      font-size: calc($fs--sm - 0.2rem);
+      color: $clr--text--dark;
+      padding: 1em;
+      background-color: $clr--bg--gray;
+      border-radius: 0.1em;
+      outline: 1px solid rgba($clr--gray, 0.5);
+      width: 100%;
+      min-height: 5rem;
+      height: 20rem;
+      resize: vertical;
+    }
+  }
+  &--respond--btn {
+    width: 15rem;
+    font-size: calc($fs--sm - 0.2rem);
+    padding-block: 0.5em;
+    margin-top: 1rem;
+    background-color: $clr--primary;
+    color: $clr--text--light;
+    border-radius: 0.2em;
+    cursor: pointer;
+    transition: 0.3s;
+    &:hover {
+      background-color: darken($clr--primary, 10%);
+    }
+  }
+}
