@@ -1,0 +1,345 @@
+.aboutUs {
+  &--ad--list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    @include md {
+      grid-template-columns: 1fr;
+    }
+    @include sm {
+      grid-template-columns: 1fr;
+    }
+  }
+  &--ad--list--item {
+    padding-inline: 10%;
+    color: $clr--text--dark;
+    @include md {
+      padding-inline: 3rem;
+    }
+    @include sm {
+      padding-inline: 3rem;
+    }
+    &:nth-child(1) {
+      color: $clr--text--light;
+      background-color: $clr--bg--dark;
+      button {
+        color: $clr--text--light;
+        border-color: rgba($clr--light, 0.3);
+      }
+    }
+    &:nth-child(3) {
+      background-color: $clr--bg--gray;
+    }
+  }
+  &--ad--list--item--title {
+    font-size: 2.8rem;
+    margin-bottom: 2rem;
+    @include lg {
+      font-size: 2.2rem;
+    }
+    @include md {
+      font-size: 2.8rem;
+    }
+    @include sm {
+      font-size: 2.2rem;
+    }
+  }
+  &--ad--list--item--description {
+    font-size: calc($fs--sm - 0.2rem);
+    margin-bottom: 2rem;
+    max-width: 65ch;
+  }
+  &--ad--list--item--btn {
+    font-size: calc($fs--sm - 0.2rem);
+    border: 1px solid rgba($clr--dark, 0.3);
+    border-radius: 0.3rem;
+    padding: 0.5rem 6.5rem;
+    cursor: pointer;
+    position: relative;
+    transition: 0.4s ease;
+    isolation: isolate;
+    &::after {
+      display: block;
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border: 1px solid $clr--primary;
+      background-color: $clr--primary;
+      top: 0;
+      right: 0;
+      transition: 0.3s ease;
+      z-index: -1;
+      transform: scaleY(0);
+      transform-origin: bottom;
+    }
+    &:hover {
+      color: $clr--text--light;
+      border-color: $clr--primary;
+    }
+    &:hover::after {
+      transform: scaleY(1);
+    }
+  }
+  &--company--info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+    @include xl {
+      gap: 3rem;
+    }
+    @include lg {
+      grid-template-columns: 1fr;
+    }
+    @include md {
+      grid-template-columns: 1fr;
+    }
+    @include sm {
+      grid-template-columns: 1fr;
+    }
+  }
+  &--company--img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  &--company--context {
+    padding-right: 25%;
+    color: $clr--text--dark;
+    @include xl {
+      padding-right: 4rem;
+    }
+    @include lg {
+      padding-inline: 4rem;
+    }
+    @include md {
+      padding-inline: 3rem;
+    }
+    @include sm {
+      padding-inline: 3rem;
+    }
+  }
+  &--company--title {
+    font-size: $fs--xxmd;
+    text-wrap: balance;
+    margin-bottom: 3rem;
+    @include md {
+      font-size: 2.8rem;
+    }
+    @include sm {
+      font-size: 2.2rem;
+    }
+  }
+  &--gray--bg {
+    @include flexCenter;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background-color: #ddd;
+    margin-bottom: 3rem;
+    color: $clr--dark;
+    font-size: 5rem;
+  }
+  &--company--description {
+    margin-bottom: 3rem;
+    font-size: calc($fs--sm - 0.2rem);
+  }
+  &--manager--knowledge--item {
+    margin-bottom: 1.6rem;
+  }
+  &--manager--knowledge--topic {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: normal;
+    font-size: calc($fs--sm - 0.2rem);
+    margin-bottom: 0.5rem;
+  }
+  &--manager--knowledge--progressbar {
+    width: 100%;
+    height: 0.6rem;
+    outline: 1px solid rgba($clr--twitter, 0.1);
+  }
+  &--manager--knowledge--progress {
+    display: block;
+    width: 0;
+    height: 100%;
+    background-color: $clr--primary;
+  }
+  &--contact {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    @include lg {
+      grid-template-columns: 1fr;
+    }
+    @include md {
+      grid-template-columns: 1fr;
+    }
+    @include sm {
+      grid-template-columns: 1fr;
+    }
+  }
+  &--contact--context {
+    color: $clr--text--light;
+    background-color: #2e2e2e;
+    padding-inline: 15%;
+    @include xl {
+      padding-inline: 4rem;
+    }
+    @include lg {
+      padding-inline: 4rem;
+    }
+    @include md {
+      padding-inline: 3rem;
+    }
+    @include sm {
+      padding-inline: 3rem;
+    }
+  }
+  &--contact--context--title {
+    font-size: $fs--xmd;
+    text-wrap: balance;
+    margin-bottom: 3rem;
+    @include md {
+      font-size: 2.8rem;
+    }
+    @include sm {
+      font-size: 2.2rem;
+    }
+  }
+  &--contact--context--description {
+    font-size: calc($fs--sm - 0.2rem);
+    max-width: 75ch;
+    margin-bottom: 3rem;
+  }
+  &--contact--context--postalAddress {
+    font-size: calc($fs--sm - 0.2rem);
+    margin-bottom: 3rem;
+  }
+  &--contact--context--address {
+    font-size: calc($fs--sm - 0.2rem);
+    margin-bottom: 3rem;
+  }
+  &--contact--context--phoneNumber {
+    font-size: calc($fs--sm - 0.2rem);
+    margin-bottom: 3rem;
+  }
+  &--contact--form--container {
+    @include fullImage(left center);
+    padding-inline: 5%;
+    @include xl {
+      padding-inline: 4rem;
+    }
+    @include lg {
+      padding-inline: 4rem;
+    }
+    @include md {
+      padding-inline: 3rem;
+    }
+    @include sm {
+      padding-inline: 3rem;
+    }
+  }
+  &--contact--form--title {
+    color: $clr--text--dark;
+    font-size: $fs--xmd;
+    text-wrap: balance;
+    margin-bottom: 3rem;
+    @include md {
+      font-size: 2.8rem;
+    }
+    @include sm {
+      font-size: 2.2rem;
+    }
+  }
+  &--contact--form--inputs {
+    display: grid;
+    grid-template-areas: "name email" "subject subject" "message message";
+    gap: 2rem;
+    margin-bottom: 3rem;
+    @include bp("max", 410px) {
+      grid-template-areas: "name" "email" "subject" "message";
+    }
+    > input {
+      padding-block: 1.5rem;
+      border-bottom: 1px solid rgba($clr--gray, 0.3);
+      font-size: calc($fs--sm - 0.2rem);
+      width: 100%;
+      &:focus {
+        outline: none;
+      }
+      &::placeholder {
+        color: rgba($clr--text--dark, 0.8);
+      }
+    }
+  }
+  &--form--input--name {
+    grid-area: name;
+  }
+  &--form--input--email {
+    grid-area: email;
+  }
+  &--form--input--subject {
+    grid-area: subject;
+  }
+  &--form--input--message {
+    grid-area: message;
+  }
+  &--contact--form--btn {
+    font-size: $fs--sm;
+    font-weight: bold;
+    padding: 0.5em 4em;
+    background-color: $clr--primary;
+    border-radius: 0.2rem;
+    color: $clr--text--light;
+    cursor: pointer;
+    transition: 0.3s;
+    &:hover {
+      background-color: darken($clr--primary, $amount: 8%);
+    }
+  }
+  &--socialMedia--container {
+    @include row;
+  }
+  &--socialMedia--list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include xl {
+      justify-content: space-around;
+    }
+    @include lg {
+      justify-content: space-around;
+    }
+    @include md {
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 5rem;
+    }
+    @include sm {
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 5rem;
+    }
+  }
+  &--socialMedia--list--item {
+    color: #565656;
+    font-size: 2.6rem;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  &--linkedin:hover {
+    text-shadow: 1px 1px 7px $clr--linkedIn;
+    color: $clr--linkedIn;
+  }
+  &--twitter:hover {
+    text-shadow: 1px 1px 7px $clr--twitter;
+    color: $clr--twitter;
+  }
+  &--pinterest:hover {
+    text-shadow: 1px 1px 7px $clr--pinterest;
+    color: $clr--pinterest;
+  }
+  &--facebook:hover {
+    text-shadow: 1px 1px 7px $clr--facebook;
+    color: $clr--facebook;
+  }
+}
