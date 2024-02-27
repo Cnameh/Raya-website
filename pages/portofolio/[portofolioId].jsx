@@ -8,7 +8,7 @@ const SinglePortofolioPage = () => {
         <link rel="website icon" href="/imgs/logo-little.png" type="image/icon" />
       </Head>
       <Layout>
-        <main>SinglePortofolioPage</main>
+        <main>جزئیات نمونه کار</main>
       </Layout>
     </>
   );

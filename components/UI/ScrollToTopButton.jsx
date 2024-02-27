@@ -28,13 +28,19 @@ const ScrollToTopButton = () => {
   const [hasScrolledEnough, setHasScrolledEnough] = useState(false);
 
   useEffect(() => {
-    window.addEventListener("scroll", () => {
+    function handleScrolledEnough() {
       if (scrollY > 300) {
         setHasScrolledEnough(true);
       } else {
         setHasScrolledEnough(false);
       }
-    });
+    }
+
+    window.addEventListener("scroll", handleScrolledEnough);
+
+    return () => {
+      window.removeEventListener("scroll", handleScrolledEnough);
+    };
   }, [hasScrolledEnough]);
 
   function handleGoingTop() {

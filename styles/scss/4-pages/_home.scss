@@ -58,16 +58,17 @@
     }
   }
   &--list--number {
-    @include flexCenter;
+    @include gridCenter;
+    @include circle(9.6rem);
     color: $clr--text--dark;
     font-size: $fs--xmd;
-    width: 9rem;
-    aspect-ratio: 1;
     border: 2px solid $clr--secondary;
-    border-radius: 50%;
     font-weight: bold;
     margin-inline: auto;
     transition: 0.3s;
+    @include sm {
+      @include size(8.5rem);
+    }
   }
   &--list--title {
     font-size: calc($fs--sm + 0.2rem);
@@ -169,14 +170,15 @@
     text-align: center;
   }
   &--documents--icon {
+    @include gridCenter;
+    @include circle(10rem);
     color: $clr--light;
     background-color: $clr--tertiary;
     font-size: 4rem;
-    width: 9rem;
-    aspect-ratio: 1;
-    @include flexCenter;
-    border-radius: 50%;
     margin: 0 auto 1rem;
+    @include sm {
+      @include size(9rem);
+    }
   }
   &--documents--title {
     color: $clr--text--dark;
@@ -315,7 +317,7 @@
     }
     @include sm {
       align-items: flex-start;
-      border-bottom: 1px dotted rgba($color: $clr--gray, $alpha: 0.5);
+      border-bottom: 1px dotted rgba($clr--gray, 0.5);
       padding-bottom: 2rem;
     }
   }
@@ -342,7 +344,7 @@
     gap: 1.6rem;
   }
   &--statistics--icon {
-    color: rgba($color: $clr--text--gray, $alpha: 0.3);
+    color: rgba($clr--text--gray, 0.3);
     font-size: $fs--xmd;
   }
   &--statistics--title {
@@ -354,7 +356,7 @@
   }
   &--statistics--detail {
     font-size: calc($fs--sm - 0.2rem);
-    color: rgba($color: $clr--text--gray, $alpha: 0.5);
+    color: rgba($clr--text--gray, 0.5);
   }
 }
 
@@ -396,7 +398,7 @@
   }
   &--list--item {
     text-align: center;
-    border: 2px solid rgba($color: $clr--gray, $alpha: 0.2);
+    border: 2px solid rgba($clr--gray, 0.2);
     border-radius: 1rem;
     padding-inline: 2rem;
     height: max-content;
@@ -478,8 +480,8 @@
     cursor: pointer;
     transition: 0.3s;
     &:hover {
-      background-color: darken($color: $clr--tertiary, $amount: 8%);
-      border-color: darken($color: $clr--tertiary, $amount: 8%);
+      background-color: darken($clr--tertiary, $amount: 8%);
+      border-color: darken($clr--tertiary, $amount: 8%);
     }
   }
 }
@@ -550,7 +552,7 @@
   }
   &--or {
     height: 1px;
-    background-color: rgba($color: $clr--gray, $alpha: 0.4);
+    background-color: rgba($clr--gray, 0.4);
   }
   &--form--title {
     color: $clr--text--dark;
@@ -598,13 +600,13 @@
     }
     > input {
       padding: 1rem 1.3rem;
-      outline: 1px solid rgba($color: $clr--gray, $alpha: 0.4);
+      outline: 1px solid rgba($clr--gray, 0.4);
       border-radius: 0.5rem;
       width: 100%;
     }
     > textarea {
       padding: 1rem 1.3rem;
-      outline: 1px solid rgba($color: $clr--gray, $alpha: 0.4);
+      outline: 1px solid rgba($clr--gray, 0.4);
       border-radius: 0.5rem;
       width: 100%;
       min-height: 5rem;
@@ -636,8 +638,8 @@
     cursor: pointer;
     transition: 0.3s;
     &:hover {
-      background-color: darken($color: $clr--tertiary, $amount: 8%);
-      border-color: darken($color: $clr--tertiary, $amount: 8%);
+      background-color: darken($clr--tertiary, $amount: 8%);
+      border-color: darken($clr--tertiary, $amount: 8%);
     }
   }
 }
@@ -768,8 +770,8 @@
     cursor: pointer;
     transition: 0.3s;
     &:hover {
-      background-color: darken($color: $clr--secondary, $amount: 8%);
-      border-color: darken($color: $clr--secondary, $amount: 8%);
+      background-color: darken($clr--secondary, $amount: 8%);
+      border-color: darken($clr--secondary, $amount: 8%);
     }
   }
 }

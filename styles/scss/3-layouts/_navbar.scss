@@ -41,57 +41,48 @@
   }
   &--icons {
     display: flex;
-    gap: 3em;
+    gap: 2.5em;
   }
   &--search--icon {
-    width: $size--sm;
-    fill: $clr--light;
-    aspect-ratio: 1;
+    font-size: calc($fs--sm + 0.2rem);
+    color: $clr--light;
     transition: 0.3s;
     cursor: pointer;
     &:hover {
-      fill: rgba($color: $clr--light, $alpha: 0.5);
+      color: rgba($clr--light, 0.5);
     }
     @include lg {
-      $size--sm: 2.4rem;
-      width: $size--sm;
+      font-size: calc($fs--sm + 0.2rem);
     }
     @include md {
-      $size--sm: 2.4rem;
-      width: $size--sm;
+      font-size: calc($fs--sm + 0.4rem);
     }
     @include sm {
-      $size--sm: 2.4rem;
-      width: $size--sm;
+      font-size: calc($fs--sm + 0.4rem);
     }
   }
   &--bars--icon {
     display: none;
-    width: $size--sm;
-    fill: $clr--light;
-    aspect-ratio: 1;
+    font-size: calc($fs--sm + 0.2rem);
+    color: $clr--light;
     transition: 0.3s;
     cursor: pointer;
     &:hover {
-      fill: rgba($color: $clr--light, $alpha: 0.5);
+      color: rgba($clr--light, 0.5);
     }
     @include lg {
-      $size--sm: 2.4rem;
-      width: $size--sm;
-      display: block;
+      font-size: calc($fs--sm + 0.2rem);
     }
     @include md {
-      $size--sm: 2.4rem;
-      width: $size--sm;
+      font-size: calc($fs--sm + 0.3rem);
       display: block;
     }
     @include sm {
-      $size--sm: 2.4rem;
-      width: $size--sm;
+      font-size: calc($fs--sm + 0.3rem);
       display: block;
     }
   }
   &--stick {
-    background-color: rgba($color: #282828, $alpha: 0.9);
+    background-color: rgba(#282828, 0.9);
   }
 }

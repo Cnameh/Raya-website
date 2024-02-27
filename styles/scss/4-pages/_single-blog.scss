@@ -1,0 +1,303 @@
+.singleBlog {
+  &--main {
+    overflow-x: clip;
+    overflow-y: visible;
+  }
+  &--content {
+    @include row;
+    display: grid;
+    margin-block: 4rem;
+    grid-template-columns: 2.5fr 1fr;
+    gap: 3rem;
+    grid-area: content;
+    position: relative;
+    isolation: isolate;
+    @include bp("max", 900px) {
+      grid-template-columns: 1fr;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      height: 100%;
+      width: 100%;
+      background-color: #f4f4f4;
+      opacity: 1;
+      z-index: -1;
+      @include bp("max", 900px) {
+        display: none;
+      }
+    }
+  }
+  &--about {
+    display: grid;
+    grid-template-columns: 0 1fr;
+    @include bp("max", 900px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &--item--context {
+    color: $clr--text--dark;
+  }
+  &--item--name {
+    font-size: calc($fs--sm - 0.4rem);
+    background-color: $clr--primary;
+    padding: 0.3em 1.5em;
+    margin-bottom: 1.5rem;
+    color: $clr--text--light;
+    cursor: pointer;
+    transition: 0.3s;
+    &:hover {
+      color: $clr--text--dark;
+    }
+  }
+  &--item--title {
+    font-size: calc($fs--sm + 0.4rem);
+    font-weight: bold;
+    width: max-content;
+    display: block;
+    @include bp("max", 350px) {
+      font-size: $fs--sm;
+    }
+  }
+  &--item--info {
+    display: flex;
+    gap: 0.5rem;
+    font-size: calc($fs--sm - 0.2rem);
+    margin-block: 1rem 4rem;
+    > span {
+      color: $clr--text--gray;
+    }
+    > a {
+      text-decoration: underline dotted $clr--primary;
+      text-underline-offset: 0.5em;
+      &:hover {
+        text-decoration-style: solid;
+      }
+    }
+  }
+  &--img--container {
+    padding: 0.6rem;
+    background-color: $clr--bg--gray;
+    margin-bottom: 3rem;
+  }
+  &--img {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+  }
+  &--paragraph {
+    color: $clr--text--dark;
+    font-size: calc($fs--sm - 0.2rem);
+    @include bp("max", 350px) {
+      font-size: calc($fs--sm - 0.3rem);
+    }
+  }
+  &--comments {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 2rem;
+    border-bottom: 1px dotted rgba($clr--gray, 0.4);
+    @include sm {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 3rem;
+    }
+  }
+  &--comments--title {
+    font-size: calc($fs--sm - 0.2rem);
+    color: $clr--text--dark;
+    position: relative;
+    padding-right: 2.2em;
+    &::before {
+      content: attr(badge);
+      @include size(2rem);
+      @include gridCenter;
+      position: absolute;
+      background-color: $clr--primary;
+      color: $clr--text--light;
+      right: 0;
+    }
+  }
+  &--comments--tags {
+    font-size: calc($fs--sm - 0.2rem);
+    color: $clr--text--dark;
+    display: flex;
+    gap: 0.5em;
+    @include sm {
+      flex-wrap: wrap;
+    }
+    @include bp("max", 300px) {
+      flex-direction: column;
+    }
+  }
+  &--comments--tag {
+    border: 1px solid rgba($clr--gray, 0.4);
+    border-radius: 0.2em;
+    padding: 0.3em 1.5em;
+    transition: 0.4s;
+    &:hover {
+      border-color: transparent;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 3px 15px;
+    }
+  }
+  &--like--share {
+    display: flex;
+    justify-content: space-between;
+    padding-block: 2rem;
+  }
+  &--like--btn {
+    @include flexCenter(row, 0.5rem);
+    padding-inline: 0.7em;
+    color: rgba($clr--text--dark, 0.5);
+    font-size: $fs--sm;
+    background-color: $clr--bg--gray;
+    border-radius: 5em;
+    cursor: pointer;
+  }
+  &--like--count {
+    font-size: calc($fs--sm - 0.2rem);
+  }
+
+  &--relatedPosts--title {
+    color: $clr--text--dark;
+    font-size: $fs--sm;
+    margin-bottom: 1.5rem;
+  }
+
+  &--relatedPosts--list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    @include md {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include sm {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &--relatedPosts--item--title {
+    color: $clr--text--dark;
+    font-size: $fs--sm;
+    margin-block: 1rem;
+  }
+
+  &--relatedPosts--item--img {
+    width: 100%;
+    aspect-ratio: 5 / 4;
+    object-fit: cover;
+  }
+
+  &--respond--title {
+    border-bottom: 1px dotted rgba($clr--gray, 0.4);
+    color: $clr--text--dark;
+    font-size: calc($fs--sm + 0.2rem);
+    padding-bottom: 1em;
+    margin-bottom: 2rem;
+  }
+  &--respond--inputs--container {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-areas:
+      "name email website"
+      "comment comment comment";
+    gap: 2rem;
+    @include sm {
+      grid-template-areas:
+        "name"
+        "email"
+        "website"
+        "comment";
+    }
+  }
+  &--respond--name {
+    grid-area: name;
+    > label {
+      color: $clr--text--dark;
+      font-size: calc($fs--sm - 0.2rem);
+      margin-bottom: 1.5rem;
+    }
+    > input {
+      font-size: calc($fs--sm - 0.2rem);
+      color: $clr--text--dark;
+      padding: 1em;
+      background-color: $clr--bg--gray;
+      border-radius: 0.1em;
+      outline: 1px solid rgba($clr--gray, 0.5);
+      width: 100%;
+    }
+  }
+  &--respond--email {
+    grid-area: email;
+    > label {
+      color: $clr--text--dark;
+      font-size: calc($fs--sm - 0.2rem);
+      margin-bottom: 1.5rem;
+    }
+    > input {
+      font-size: calc($fs--sm - 0.2rem);
+      color: $clr--text--dark;
+      padding: 1em;
+      background-color: $clr--bg--gray;
+      border-radius: 0.1em;
+      outline: 1px solid rgba($clr--gray, 0.5);
+      width: 100%;
+    }
+  }
+  &--respond--website {
+    grid-area: website;
+    > label {
+      color: $clr--text--dark;
+      font-size: calc($fs--sm - 0.2rem);
+      margin-bottom: 1.5rem;
+    }
+    > input {
+      font-size: calc($fs--sm - 0.2rem);
+      color: $clr--text--dark;
+      padding: 1em;
+      background-color: $clr--bg--gray;
+      border-radius: 0.1em;
+      outline: 1px solid rgba($clr--gray, 0.5);
+      width: 100%;
+    }
+  }
+  &--respond--comment {
+    grid-area: comment;
+    > label {
+      color: $clr--text--dark;
+      font-size: calc($fs--sm - 0.2rem);
+      margin-bottom: 1.5rem;
+    }
+    > textarea {
+      font-size: calc($fs--sm - 0.2rem);
+      color: $clr--text--dark;
+      padding: 1em;
+      background-color: $clr--bg--gray;
+      border-radius: 0.1em;
+      outline: 1px solid rgba($clr--gray, 0.5);
+      width: 100%;
+      min-height: 5rem;
+      height: 20rem;
+      resize: vertical;
+    }
+  }
+  &--respond--btn {
+    width: 15rem;
+    font-size: calc($fs--sm - 0.2rem);
+    padding-block: 0.5em;
+    margin-top: 1rem;
+    background-color: $clr--primary;
+    color: $clr--text--light;
+    border-radius: 0.2em;
+    cursor: pointer;
+    transition: 0.3s;
+    &:hover {
+      background-color: darken($clr--primary, 10%);
+    }
+  }
+}

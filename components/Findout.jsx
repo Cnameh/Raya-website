@@ -1,3 +1,4 @@
+// icons
 import { IoPricetagOutline } from "react-icons/io5";
 import { BiShoppingBag } from "react-icons/bi";
 import { IoFilmOutline } from "react-icons/io5";
@@ -8,33 +9,29 @@ const Findout = () => {
   return (
     <section className="findout">
       <div className="findout--container">
-      <div className="spacer"></div>
+        <div className="spacer-120"></div>
         <div className="findout--content">
           <div className="findout--video">
             <img src="/imgs/bg-people.jpg" alt="عکس" />
             <IoIosPlay className="findout--play--icon" />
           </div>
           <div className="findout--context">
+            <div className="spacer-40"></div>
             <h3 className="findout--small--title">لورم ایپسوم متن ساختگی </h3>
-            <br />
-            <h2 className="findout--big--title">
-              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم
-            </h2>
-            <br />
-            <br />
+            <div className="spacer-20"></div>
+            <h2 className="findout--big--title">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم</h2>
+            <div className="spacer-30"></div>
             <p className="findout--description">
-              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
-              استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله
-              در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد
-              نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد،
-              کتابهای
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان
+              گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای
+              شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می
+              باشد، کتابهای
             </p>
-            <br />
-            <br />
+            <div className="spacer-40"></div>
             <button className="findout--btn">همین الان شروع کن</button>
           </div>
         </div>
-        <div className="spacer"></div>
+        <div className="spacer-100"></div>
         <ul className="findout--statistics">
           <li className="findout--statistics--item statistics-item-1">
             <span className="findout--statistics--number">781</span>
@@ -42,9 +39,7 @@ const Findout = () => {
               <IoPricetagOutline className="findout--statistics--icon" />
               <div>
                 <h4 className="findout--statistics--title">گزینه‌های مختلف</h4>
-                <span className="findout--statistics--detail">
-                  لورم ایپسوم متن ساختگی
-                </span>
+                <span className="findout--statistics--detail">لورم ایپسوم متن ساختگی</span>
               </div>
             </div>
           </li>
@@ -54,9 +49,7 @@ const Findout = () => {
               <BiShoppingBag className="findout--statistics--icon" />
               <div>
                 <h4 className="findout--statistics--title">گزینه‌های مختلف</h4>
-                <span className="findout--statistics--detail">
-                  لورم ایپسوم متن ساختگی
-                </span>
+                <span className="findout--statistics--detail">لورم ایپسوم متن ساختگی</span>
               </div>
             </div>
           </li>
@@ -66,9 +59,7 @@ const Findout = () => {
               <IoFilmOutline className="findout--statistics--icon" />
               <div>
                 <h4 className="findout--statistics--title">گزینه‌های مختلف</h4>
-                <span className="findout--statistics--detail">
-                  لورم ایپسوم متن ساختگی
-                </span>
+                <span className="findout--statistics--detail">لورم ایپسوم متن ساختگی</span>
               </div>
             </div>
           </li>
@@ -78,14 +69,12 @@ const Findout = () => {
               <IoPersonOutline className="findout--statistics--icon" />
               <div>
                 <h4 className="findout--statistics--title">گزینه‌های مختلف</h4>
-                <span className="findout--statistics--detail">
-                  لورم ایپسوم متن ساختگی
-                </span>
+                <span className="findout--statistics--detail">لورم ایپسوم متن ساختگی</span>
               </div>
             </div>
           </li>
         </ul>
-        <div className="spacer"></div>
+        <div className="spacer-100"></div>
       </div>
     </section>
   );

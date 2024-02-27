@@ -10,15 +10,10 @@ const Footer = ({ bottomFooter }) => {
         <footer className="footer">
           <div className="footer--row">
             <div className="footer--col footer--contact">
-              <img
-                className="footer--logo"
-                src="/imgs/logo.png"
-                alt="لوگوی وبسایت"
-              />
+              <img className="footer--logo" src="/imgs/logo.png" alt="لوگوی وبسایت" />
               <p className="footer--description">
-                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
-                استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله
-                در ستون و سطرآنچنان که است.
+                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان
+                گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که است.
               </p>
               <ul className="footer--contact--paths">
                 <li>
@@ -39,19 +34,19 @@ const Footer = ({ bottomFooter }) => {
               <h3 className="footer--title">دسته بندی</h3>
               <ul className="footer--categories--list">
                 <li>
-                  <Link href="/">طراحی</Link>
+                  <Link href="#">طراحی</Link>
                 </li>
                 <li>
-                  <Link href="/">همکاری</Link>
+                  <Link href="#">همکاری</Link>
                 </li>
                 <li>
-                  <Link href="/">علم</Link>
+                  <Link href="#">علم</Link>
                 </li>
                 <li>
-                  <Link href="/">تکنولوژی</Link>
+                  <Link href="#">تکنولوژی</Link>
                 </li>
                 <li>
-                  <Link href="/">شرکت</Link>
+                  <Link href="#">شرکت</Link>
                 </li>
               </ul>
             </div>
@@ -59,32 +54,20 @@ const Footer = ({ bottomFooter }) => {
               <h3 className="footer--title">اخبار اخیر</h3>
               <ul className="footer--news--list">
                 <li className="footer--news--list--item">
-                  <img
-                    className="footer--news--img"
-                    src="/imgs/sport-100x100.jpg"
-                    alt="عکس"
-                  />
+                  <img className="footer--news--img" src="/imgs/sport-100x100.jpg" alt="عکس" />
                   <div className="footer--news--context">
-                    <Link href="/">
-                      <h4 className="footer--news--title">
-                        جدید ترین پست های گالری
-                      </h4>
+                    <Link href="#">
+                      <h4 className="footer--news--title">جدید ترین پست های گالری</h4>
                     </Link>
                     <span className="footer--news--subject">رایا</span>
                     <span className="footer--news--date">1402 / 8 / 12</span>
                   </div>
                 </li>
                 <li className="footer--news--list--item">
-                  <img
-                    className="footer--news--img"
-                    src="/imgs/baker-100x100.jpg"
-                    alt="عکس"
-                  />
+                  <img className="footer--news--img" src="/imgs/baker-100x100.jpg" alt="عکس" />
                   <div className="footer--news--context">
-                    <Link href="/">
-                      <h4 className="footer--news--title">
-                        جدید ترین پست های گالری
-                      </h4>
+                    <Link href="#">
+                      <h4 className="footer--news--title">جدید ترین پست های گالری</h4>
                     </Link>
 
                     <span className="footer--news--subject">رایا</span>
@@ -92,16 +75,10 @@ const Footer = ({ bottomFooter }) => {
                   </div>
                 </li>
                 <li className="footer--news--list--item">
-                  <img
-                    className="footer--news--img"
-                    src="/imgs/bread-100x100.jpg"
-                    alt="عکس"
-                  />
+                  <img className="footer--news--img" src="/imgs/bread-100x100.jpg" alt="عکس" />
                   <div className="footer--news--context">
-                    <Link href="/">
-                      <h4 className="footer--news--title">
-                        جدید ترین پست های گالری
-                      </h4>
+                    <Link href="#">
+                      <h4 className="footer--news--title">جدید ترین پست های گالری</h4>
                     </Link>
                     <span className="footer--news--subject">رایا</span>
                     <span className="footer--news--date">1402 / 8 / 12</span>
@@ -112,7 +89,7 @@ const Footer = ({ bottomFooter }) => {
             <div className="footer--col footer--portofolio">
               <h3 className="footer--title">نمونه کارها</h3>
               <div className="footer--portofolio--imgs">
-                <Link href="/">
+                <Link href="#">
                   <span>
                     <img
                       src="/imgs/man-01.jpg"
@@ -121,7 +98,7 @@ const Footer = ({ bottomFooter }) => {
                     />
                   </span>
                 </Link>
-                <Link href="/">
+                <Link href="#">
                   <span>
                     <img
                       src="/imgs/woman-01.jpg"
@@ -130,7 +107,7 @@ const Footer = ({ bottomFooter }) => {
                     />
                   </span>
                 </Link>
-                <Link href="/">
+                <Link href="#">
                   <span>
                     <img
                       src="/imgs/man-02.jpg"
@@ -139,7 +116,7 @@ const Footer = ({ bottomFooter }) => {
                     />
                   </span>
                 </Link>
-                <Link href="/">
+                <Link href="#">
                   <span>
                     <img
                       src="/imgs/woman-02.jpg"
@@ -148,7 +125,7 @@ const Footer = ({ bottomFooter }) => {
                     />
                   </span>
                 </Link>
-                <Link href="/">
+                <Link href="#">
                   <span>
                     <img
                       src="/imgs/man-03.jpg"
@@ -157,7 +134,7 @@ const Footer = ({ bottomFooter }) => {
                     />
                   </span>
                 </Link>
-                <Link href="/">
+                <Link href="#">
                   <span>
                     <img
                       src="/imgs/woman-03.jpg"

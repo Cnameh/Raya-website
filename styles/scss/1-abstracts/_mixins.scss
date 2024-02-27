@@ -1,3 +1,8 @@
+@mixin gridCenter {
+  display: grid;
+  place-items: center;
+}
+
 @mixin flexCenter($direction: row, $gap: 0) {
   display: flex;
   flex-direction: $direction;
@@ -16,4 +21,15 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: $pos;
+}
+
+@mixin size($value) {
+  width: $value;
+  height: $value;
+}
+
+@mixin circle($value) {
+  width: $value;
+  height: $value;
+  border-radius: 50%;
 }
