@@ -3243,7 +3243,7 @@ table {
 .aboutUs--manager--knowledge--progressbar {
   width: 100%;
   height: 0.6rem;
-  outline: 1px solid rgba(18, 18, 18, 0.1);
+  outline: 1px solid rgba(156, 156, 156, 0.2);
 }
 .aboutUs--manager--knowledge--progress {
   display: block;
@@ -3472,4 +3472,152 @@ table {
 .aboutUs--facebook:hover {
   text-shadow: 1px 1px 7px #39579a;
   color: #39579a;
+}
+
+.team--member {
+  display: flex;
+}
+.team--member:nth-child(even) {
+  flex-direction: row-reverse;
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .team--member {
+    flex-direction: column;
+  }
+  .team--member:nth-child(even) {
+    flex-direction: column;
+  }
+}
+@media only screen and (min-width: 501px) and (max-width: 768px) {
+  .team--member {
+    flex-direction: column;
+  }
+  .team--member:nth-child(even) {
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .team--member {
+    flex-direction: column;
+  }
+  .team--member:nth-child(even) {
+    flex-direction: column;
+  }
+}
+.team--member--img--container {
+  width: 50%;
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .team--member--img--container {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 501px) and (max-width: 768px) {
+  .team--member--img--container {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .team--member--img--container {
+    width: 100%;
+  }
+}
+.team--member--info--container {
+  width: 50%;
+  color: #28262b;
+  padding-inline: 5%;
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .team--member--info--container {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 501px) and (max-width: 768px) {
+  .team--member--info--container {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .team--member--info--container {
+    width: 100%;
+  }
+}
+.team--member--img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.team--member--job--title {
+  font-weight: normal;
+  font-size: 1.4rem;
+  color: #9c9c9c;
+  margin-bottom: 1rem;
+}
+.team--member--name {
+  font-size: 4.8rem;
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .team--member--name {
+    font-size: 4rem;
+  }
+}
+@media only screen and (min-width: 501px) and (max-width: 768px) {
+  .team--member--name {
+    font-size: 3.2rem;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .team--member--name {
+    font-size: 2.8rem;
+  }
+}
+.team--member--quote--wrapper {
+  border: 1px solid rgba(156, 156, 156, 0.2);
+  border-radius: 0.3rem;
+  padding: 4rem 3rem;
+}
+.team--member--quote--icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: rgba(156, 156, 156, 0.5);
+  margin-right: 2rem;
+  font-size: 4rem;
+  z-index: -1;
+}
+.team--member--quote {
+  position: relative;
+  font-size: 1.4rem;
+  border-right: 3px solid #c39f76;
+  padding-right: 1.5em;
+  text-decoration: underline rgba(40, 38, 43, 0.2);
+  text-underline-offset: 0.5em;
+  isolation: isolate;
+  line-height: 2em;
+}
+.team--member--description {
+  font-size: 1.4rem;
+}
+.team--member--knowledge--item {
+  margin-bottom: 1.6rem;
+}
+.team--member--knowledge--topic {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: normal;
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+.team--member--knowledge--progressbar {
+  width: 100%;
+  height: 0.6rem;
+  outline: 1px solid rgba(156, 156, 156, 0.2);
+}
+.team--member--knowledge--progress {
+  display: block;
+  width: 0;
+  height: 100%;
+  background-color: #c39f76;
 }
